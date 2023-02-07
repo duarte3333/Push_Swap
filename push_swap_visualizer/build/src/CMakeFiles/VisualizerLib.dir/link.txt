@@ -1,0 +1,2 @@
+/usr/bin/ar qc libVisualizerLib.a CMakeFiles/VisualizerLib.dir/utils.cpp.o CMakeFiles/VisualizerLib.dir/queues.cpp.o CMakeFiles/VisualizerLib.dir/pushswap.cpp.o CMakeFiles/VisualizerLib.dir/gui.cpp.o
+/usr/bin/ranlib libVisualizerLib.a
