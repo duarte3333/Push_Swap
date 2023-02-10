@@ -6,7 +6,7 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 18:29:15 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/01/28 17:09:03 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/02/10 20:43:22 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <string.h>
 # include <stdlib.h>
 # include <limits.h>
-
 
 typedef struct s_list
 {
@@ -50,15 +49,17 @@ void	rrr(t_list **stack_a, t_list **stack_b);
 void	ra(t_list **stack_a);
 void	rb(t_list **stack_b);
 void	rr(t_list **stack_a, t_list **stack_b);
+void	print_list(t_list *stack_a, t_list *stack_b);
+void	ft_sort_three(t_list **stack_a);
+void	ft_sort_five(t_list **stack_a, t_list **stack_b);
+void	ft_sort_simple(t_list **stack_a, t_list **stack_b);
+t_list	*ft_list_loading(char **av);
+void	ft_sort_optimize(t_list **stack_a, t_list **stack_b);
+void	ft_quick_sort(t_list **stack_a, t_list **stack_b);
 int		ft_get_max(t_list *lst);
 int		ft_get_min(t_list *lst);
 int		ft_get_index(int nb, t_list *lst);
 int		ft_lstsize(t_list *lst);
-void	quicksort(t_list **stack_a, t_list **stack_b, int length);
-void	quicksort_recursion(t_list **stack_a, \
-	t_list **stack_b, int low, int high);
-int		partition(t_list **stack_a, t_list **stack_b, \
-	int low, int high);
 void	swap_two(t_list **stack_a, t_list **stack_b, int index_1, int index_2);
 void	ft_sort_simple(t_list **stack_a, t_list **stack_b);
 int		smaller_chunk1(int size, int size_chunk, t_list **stack_a);
@@ -67,8 +68,5 @@ int		ft_cost_top(t_list **lst, int index);
 int		ft_put_top_optimized(int size, int size_chunk, t_list **stack_a);
 int		ft_put_top_a(t_list **lst, int index);
 int		ft_put_top_b(t_list **lst, int index);
-
-
-
 
 #endif

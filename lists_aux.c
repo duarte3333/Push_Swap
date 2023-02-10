@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   lists_aux.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/10 17:16:16 by dsa-mora          #+#    #+#             */
+/*   Updated: 2023/02/10 17:16:18 by dsa-mora         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 //Esta funcao cria um nó
@@ -38,6 +50,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 }
 
+//Esta funcao retorna o content de um dado 
+//indice de um elemento da linked list
 int	ft_get_int(int index, t_list *lst)
 {
 	int	i;

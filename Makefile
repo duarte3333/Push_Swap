@@ -12,13 +12,17 @@ SRCS = main.c \
 	   lists_aux.c \
 	   lists_aux2.c \
 	   lists_aux3.c \
+	   put_top.c \
 	   check_input.c \
+	   print_list.c \
+	   smaller_sort.c \
+	   algorithm.c \
+	   quick_sort.c \
 	   Operations/swap.c \
 	   Operations/push.c \
 	   Operations/reverse_rotate.c \
 	   Operations/rotate.c \
 	   swap_anytwo.c \
-	   quick_sort.c \
 	   chunk.c \
 	   cost.c 
 

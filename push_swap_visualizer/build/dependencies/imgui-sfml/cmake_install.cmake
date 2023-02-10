@@ -1,4 +1,4 @@
-# Install script for directory: /home/duarte33/42School/push_swap/push_swap_visualizer/dependencies/imgui-sfml
+# Install script for directory: /nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/dependencies/imgui-sfml
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -37,13 +37,8 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build/cmake_install.cmake")
+  include("/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build/cmake_install.cmake")
 endif()
 

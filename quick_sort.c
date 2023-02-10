@@ -1,55 +1,109 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   quick_sort.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/10 20:22:11 by dsa-mora          #+#    #+#             */
+/*   Updated: 2023/02/10 21:16:20 by dsa-mora         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-int	partition(t_list **stack_a, t_list **stack_b, int low, int high)
+int	ft_get_nb_less(t_list *stack, int nb)
 {
-	int	pivot_index;
-	int	pivot_value;
-	int	i;
-	int	j;
+	int	counter;
 
-	pivot_index = ft_get_index(high, stack_a);
-
-	//if (pivot_index != high)
-	//	swap(&array[pivot_index], &array[high]);
-
-	pivot_value = ft_get_int(pivot_index, stack_a);
-	i = low;
-	j = low;
-	while (j < high)
+	counter = 0;
+	while (stack)
 	{
-		if (ft_get_int(j, stack_a) <= pivot_value)
+		if (stack->content < nb)
+			counter++;
+		stack = stack->next;
+	}
+	return (counter);
+}
+
+int	ft_get_nb_high(t_list *stack, int nb)
+{
+	int	counter;
+
+	counter = 0;
+	while (stack)
+	{
+		if (stack->content > nb)
+			counter++;
+		stack = stack->next;
+	}
+	return (counter);
+}
+
+int	ft_get_median(t_list *stack)
+{
+	int		nb_small;
+	int		nb_high;
+	int		median;
+	int		size;
+	t_list	*temp;
+
+	size = ft_lstsize(stack);
+	//printf("size: %i\n", size);
+	temp = stack;
+	while (stack)
+	{
+		nb_small = ft_get_nb_less(temp, ((stack)->content));
+		//printf("small: %i\n", nb_small);
+		nb_high = ft_get_nb_high(temp, ((stack)->content));
+		//printf("high: %i\n", nb_high);
+		if (nb_small == nb_high && (size % 2 == 1))
 		{
-			// swap_two(stack_a, stack_b, \
-			// 	ft_get_index(ft_get_int(i, stack_a), stack_a), \
-			// 	ft_get_index(ft_get_int(j, stack_a), stack_a));
-			pb(stack_a, stack_b);
-			i++;
+			median = (stack)->content;
+			break ;
 		}
-		j++;
+		else if (((nb_small - 1) == nb_high) && (size % 2 == 0))
+		{
+			median = (stack)->content;
+			break ;
+		}
+		(stack) = (stack)->next;
 	}
-	// swap_two(stack_a, stack_b, \
-	// 	ft_get_index(ft_get_int(i, stack_a), stack_a), \
-	// 	ft_get_index(ft_get_int(high, stack_a), stack_a));
-	pa(stack_a, stack_b);
-	return (i);
+	return (median);
 }
 
-void	quicksort_recursion(t_list **stack_a, t_list **stack_b, \
-	int low, int high)
+void	ft_recursion(t_list **stack_a, t_list **stack_b, int median)
 {
-	int	pivot_index;
-
-	if (low < high)
+	while ((*stack_a))
 	{
-		pivot_index = partition(stack_a, stack_b, low, high);
-		quicksort_recursion(stack_a, stack_b, low, pivot_index - 1);
-		quicksort_recursion(stack_a, stack_b, pivot_index + 1, high);
+		if ((*stack_a) <= median)
+			pb(stack_a, stack_b);
+		else
+			ra(stack_a);
 	}
 }
 
-void	quicksort(t_list **stack_a, t_list **stack_b, int length)
+void	ft_quick_sort(t_list **stack_a, t_list **stack_b)
 {
-	quicksort_recursion(stack_a, stack_b, 0, length - 1);
+	t_list	*temp;
+	int		median;
+	int		size_a;
+
+	size_a = ft_lstsize(*stack_a);
+
+	if (*stack_a)
+	{		
+		median = ft_get_median(*stack_a);
+		temp = *stack_a;
+		while ((*stack_a))
+		{
+			if ((*stack_a) <= median)
+				pb(stack_a, stack_b);
+			else
+				ra(stack_a);
+			(*stack_a) = (*stack_a)->next;
+		}
+		//if (ft_lstsize(*stack_b) != size_a)
+		//	ft_quick_sort(&temp, stack_b);
+	}
 }
-
-
