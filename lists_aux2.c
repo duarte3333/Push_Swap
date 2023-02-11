@@ -38,7 +38,6 @@ int	ft_get_min(t_list *lst)
 	return (min);
 }
 
-
 //Retorna o indice do elemento para o 
 //qual o lst esta a apontar
 int	ft_get_index(int nb, t_list *lst)

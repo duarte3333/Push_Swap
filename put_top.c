@@ -6,7 +6,7 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 17:16:04 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/02/10 17:16:26 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/02/11 18:17:27 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_put_top_a(t_list **lst, int index)
 	int	size;
 	int	i;
 
-	printf("index: %i\n", index);
+	//printf("index: %i\n", index);
 	size = ft_lstsize(*lst);
 	if (index == -1)
 		return (-1);
