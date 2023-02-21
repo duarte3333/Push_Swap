@@ -18,6 +18,9 @@ SRCS = main.c \
 	   smaller_sort.c \
 	   algorithm.c \
 	   quick_sort.c \
+	   quick_sort_again.c \
+	   median.c \
+	   median_partition.c \
 	   Operations/swap.c \
 	   Operations/push.c \
 	   Operations/reverse_rotate.c \

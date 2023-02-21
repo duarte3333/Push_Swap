@@ -40,6 +40,89 @@ void	ft_sort_three(t_list **stack_a)
 		rra(stack_a);
 }
 
+void	ft_sort_three_B(t_list **stack_b)
+{
+	int	first;
+	int	second;
+	int	third;
+
+	first = (*stack_b)->content;
+	second = (*stack_b)->next->content;
+	third = (*stack_b)->next->next->content;
+
+	if ((first > second) && (second < third) && (first < third))
+		sb(*stack_b);
+	else if ((first > second) && (second > third) && (first > third))
+	{
+		sb(*stack_b);
+		rrb(stack_b);
+	}
+	else if ((first > second) && (second < third) && (first > third))
+		rb(stack_b);
+	else if ((first < second) && (second > third) && (first < third))
+	{
+		sb(*stack_b);
+		rb(stack_b);
+	}	
+	else if ((first < second) && (second > third) && (first > third))
+		rrb(stack_b);
+}
+
+
+void	ft_sort_special_three(t_list **stack_a, t_list **stack_b)
+{
+	int	first;
+	int	second;
+	int	third;
+
+	first = (*stack_a)->content;
+	second = (*stack_a)->next->content;
+	third = (*stack_a)->next->next->content;
+
+	if ((first > second) && (second < third) && (first < third))
+		sa(*stack_a);
+	else if ((first > second) && (second > third) && (first > third))
+	{
+		sa(*stack_a);
+		pb(stack_a, stack_b);
+		pb(stack_a, stack_b);
+		ra(stack_a);
+		pa(stack_a, stack_b);
+		pa(stack_a, stack_b);
+		rra(stack_a);
+	}
+	else if ((first > second) && (second < third) && (first > third))
+	{
+		ra(stack_a);
+		pb(stack_a, stack_b);
+		pb(stack_a, stack_b);
+		rra(stack_a);
+		pa(stack_a, stack_b);
+		pa(stack_a, stack_b);
+	}
+	else if ((first < second) && (second > third) && (first < third))
+	{
+		sa(*stack_a);
+		ra(stack_a);
+		pb(stack_a, stack_b);
+		pb(stack_a, stack_b);
+		rra(stack_a);
+		pa(stack_a, stack_b);
+		pa(stack_a, stack_b);
+	}	
+	else if ((first < second) && (second > third) && (first > third))
+	{
+		pb(stack_a, stack_b);
+		pb(stack_a, stack_b);
+		ra(stack_a);
+		pa(stack_a, stack_b);
+		pa(stack_a, stack_b);
+		rra(stack_a);
+	}
+}
+
+
+
 void	ft_sort_five(t_list **stack_a, t_list **stack_b)
 {
 	int	index_min;
