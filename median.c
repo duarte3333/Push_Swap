@@ -52,7 +52,7 @@ int	ft_get_median(t_list *stack)
 			median = (stack)->content;
 			break ;
 		}
-		else if (((nb_small - 1) == (nb_high)) && (size % 2 == 0))
+		else if (((nb_small) == (nb_high - 1)) && (size % 2 == 0))
 		{
 			median = (stack)->content;
 			break ;

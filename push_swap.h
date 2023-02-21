@@ -19,6 +19,7 @@
 # include <stdlib.h>
 # include <limits.h>
 
+
 typedef struct s_list
 {
 	int				content;
@@ -34,6 +35,7 @@ typedef struct s_stack {
 	int		current_size_b;
 	int		total_sorted;
 	int		size_partition;
+	int 	flag;
 }				t_stack;
 
 //checker and parsing
