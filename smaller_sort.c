@@ -84,40 +84,30 @@ void	ft_sort_special_three(t_list **stack_a, t_list **stack_b)
 	else if ((first > second) && (second > third) && (first > third))
 	{
 		sa(*stack_a);
-		pb(stack_a, stack_b);
-		pb(stack_a, stack_b);
 		ra(stack_a);
-		pa(stack_a, stack_b);
-		pa(stack_a, stack_b);
+		sa(*stack_a);
 		rra(stack_a);
+		sa(*stack_a);
 	}
 	else if ((first > second) && (second < third) && (first > third))
 	{
+		sa(*stack_a);
 		ra(stack_a);
-		pb(stack_a, stack_b);
-		pb(stack_a, stack_b);
+		sa(*stack_a);
 		rra(stack_a);
-		pa(stack_a, stack_b);
-		pa(stack_a, stack_b);
 	}
 	else if ((first < second) && (second > third) && (first < third))
 	{
-		sa(*stack_a);
 		ra(stack_a);
-		pb(stack_a, stack_b);
-		pb(stack_a, stack_b);
+		sa(*stack_a);
 		rra(stack_a);
-		pa(stack_a, stack_b);
-		pa(stack_a, stack_b);
 	}	
 	else if ((first < second) && (second > third) && (first > third))
 	{
-		pb(stack_a, stack_b);
-		pb(stack_a, stack_b);
 		ra(stack_a);
-		pa(stack_a, stack_b);
-		pa(stack_a, stack_b);
+		sa(*stack_a);
 		rra(stack_a);
+		sa(*stack_a);
 	}
 }
 

@@ -27,17 +27,27 @@ void	ft_rotate_number(int nb_rotations, t_list **stack_a)
 void	ft_rotate_until_last_is_last(t_list **stack_a)
 {
 	int max;
+	int index;
+	int nb_rotations;
 
 	//printf("RO TA TE\n");
 	max = ft_get_max(*stack_a);
+	index = ft_get_index(max, *stack_a) + 1;
+	nb_rotations = ft_lstsize(*stack_a) - index;
+	while (nb_rotations)
+	{
+		rra(stack_a);
+		nb_rotations--;
+	}
 	//printf("max %i\n", max);
 	//printf("last %i\n", ft_lstlast(*stack_a)->content);
-	if (ft_lstlast(*stack_a)->content == max)
-		return ;
-	while ((*stack_a)->content != max)
-		ra(stack_a);
-	ra(stack_a);
-	//printf("RO TA TE\n");
+	// printf("its me");
+	// if (ft_lstlast(*stack_a)->content == max)
+	// 	return ;
+	// while ((*stack_a)->content != max)
+	// 	ra(stack_a);
+	// ra(stack_a);
+	// printf("RO TA TE\n");
 
 }
 
@@ -192,6 +202,7 @@ void	ft_quick_sort_a(t_list **stack_a, t_list **stack_b, int part, t_stack *stac
 	int		counter;
 	int		size;
 	int		nb;
+	int		i;
 
 	//printf("entrei no A e currentA %i\n", stacks->current_size_a);
 	size = stacks->current_size_a - stacks->total_sorted;
@@ -212,6 +223,7 @@ void	ft_quick_sort_a(t_list **stack_a, t_list **stack_b, int part, t_stack *stac
 			//printf("im here\n");
 			nb = ft_get_min(*stack_a);
 			//printf("oioi %i\n", nb);
+			i = 0;
 			while (1)
 			{
 				if ((*stack_a)->content == nb)
@@ -220,7 +232,10 @@ void	ft_quick_sort_a(t_list **stack_a, t_list **stack_b, int part, t_stack *stac
 					break;
 				}
 				else
+				{
 					ra(stack_a); 
+					i++;
+				}
 			}
 			stacks->current_size_a--;
 			stacks->current_size_b++;
