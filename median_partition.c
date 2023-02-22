@@ -87,7 +87,7 @@ int	ft_get_partition_median_alternative(t_list *stack, int len)
 			median = (stack)->content;
 			break ;
 		}
-		else if (((nb_small - 1) == (nb_high)) && (len % 2 == 0))
+		else if (((nb_small) == (nb_high - 1)) && (len % 2 == 0))
 		{
 			median = (stack)->content;
 			break ;

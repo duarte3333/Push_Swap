@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   quick_sort.c                                       :+:      :+:    :+:   */
+/*   quick_sort_again.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 20:22:11 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/02/11 18:19:22 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/02/22 17:46:53 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,8 +194,8 @@ void	ft_quick_sort_a(t_list **stack_a, t_list **stack_b, int part, t_stack *stac
 	int		i;
 
 	//printf("entrei no A e currentA %i\n", stacks->current_size_a);
-	size = stacks->current_size_a - stacks->total_sorted;
-	stacks->median_a = ft_get_partition_median(*stack_a, size);
+	size = stacks->current_size_a;
+	stacks->median_a = ft_get_partition_median(*stack_a, stacks->current_size_a - stacks->total_sorted);
 	//printf("median A %i\n", stacks->median_a);
 	if (ft_is_sorted(*stack_a))
 	{
@@ -209,39 +209,38 @@ void	ft_quick_sort_a(t_list **stack_a, t_list **stack_b, int part, t_stack *stac
 	{
 		if ((stacks->current_size_a - stacks->total_sorted) == 4)
 		{
-			stacks->median_a = ft_get_partition_median_alternative(*stack_a, size);
-			printf("im here\n");
-			printf("median A %i\n", stacks->median_a);
-			print_list(*stack_a, *stack_b);
+			//printf("im here\n");
+			//printf("median A %i\n", stacks->median_a);
+			//print_list(*stack_a, *stack_b);
 
 			// nb = ft_get_min(*stack_a);
 			// //printf("oioi %i\n", nb);
-			i = 0;
-			while (1)
-			{
-				if ((*stack_a)->content < stacks->median_a)
-				{
-					pb(stack_a, stack_b);
-					break;
-				}
-				else
-				{
-					ra(stack_a); 
-					i++;
-				}
-			}
-			stacks->current_size_a--;
-			stacks->current_size_b++;
+			// i = 0;
+			// while (1)
+			// {
+			// 	if ((*stack_a)->content == nb)
+			// 	{
+			// 		pb(stack_a, stack_b);
+			// 		break;
+			// 	}
+			// 	else
+			// 	{
+			// 		ra(stack_a); 
+			// 		i++;
+			// 	}
+			// }
+			// stacks->current_size_a--;
+			// stacks->current_size_b++;
 			// ft_rotate_until_last_is_last(stack_a);
 		}
 		if ((stacks->current_size_a - stacks->total_sorted) == 3)
 		{
-			printf("tenho tres\n");
-			printf("len aos 3 %i\n", stacks->current_size_a);
+			//printf("tenho tres\n");
+			//printf("len aos 3 %i\n", stacks->current_size_a);
 			ft_sort_special_three(stack_a, stack_b);
 			stacks->total_sorted += 3;
-			printf("total sorted %i\n", stacks->total_sorted);
-			print_list(*stack_a, *stack_b);
+			//printf("total sorted %i\n", stacks->total_sorted);
+			//print_list(*stack_a, *stack_b);
 			return ;
 		}
 		if (((*stack_a)->content) < stacks->median_a)
@@ -251,10 +250,12 @@ void	ft_quick_sort_a(t_list **stack_a, t_list **stack_b, int part, t_stack *stac
 			stacks->current_size_b++;
 		}
 		else
+		{
 			ra(stack_a);
-		size--;
+			size--;
+		}
 		//printf("total sorted %i\n", stacks->total_sorted);
-		printf("current sizeA %i e size %i\n", stacks->current_size_a, size);
+		//printf("current sizeA %i e size %i\n", stacks->current_size_a, size);
 		//print_list(*stack_a, *stack_b);
 	}
 	//print_list(*stack_a, *stack_b);
