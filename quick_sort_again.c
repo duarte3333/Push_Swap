@@ -12,18 +12,6 @@
 
 #include "push_swap.h"
 
-void	ft_rotate_number(int nb_rotations, t_list **stack_a)
-{
-	int i;
-
-	i = nb_rotations;
-	while (i)
-	{
-		ra(stack_a);
-		i--;
-	}
-}
-
 void	ft_rotate_until_last_is_last(t_list **stack_a)
 {
 	int max;
@@ -34,21 +22,22 @@ void	ft_rotate_until_last_is_last(t_list **stack_a)
 	max = ft_get_max(*stack_a);
 	index = ft_get_index(max, *stack_a) + 1;
 	nb_rotations = ft_lstsize(*stack_a) - index;
-	while (nb_rotations)
-	{
-		rra(stack_a);
-		nb_rotations--;
+	if (index < nb_rotations)
+	{	
+		while (index)
+		{
+			ra(stack_a);
+			index--;
+		}
 	}
-	//printf("max %i\n", max);
-	//printf("last %i\n", ft_lstlast(*stack_a)->content);
-	// printf("its me");
-	// if (ft_lstlast(*stack_a)->content == max)
-	// 	return ;
-	// while ((*stack_a)->content != max)
-	// 	ra(stack_a);
-	// ra(stack_a);
-	// printf("RO TA TE\n");
-
+	else
+	{
+		while (nb_rotations)
+		{
+			rra(stack_a);
+			nb_rotations--;
+		}
+	}
 }
 
 
@@ -267,7 +256,8 @@ void	ft_quick_sort_a(t_list **stack_a, t_list **stack_b, int part, t_stack *stac
 	if (part)
 	{
 		//printf("goes in\n");
-		ft_rotate_number(stacks->total_sorted, stack_a);
+		//ft_rotate_number(stacks->total_sorted, stack_a);
+		ft_rotate_until_last_is_last(stack_a);
 		ft_quick_sort_a(stack_a, stack_b, 1, stacks);
 	}
 	else 
