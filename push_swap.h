@@ -6,7 +6,7 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 18:29:15 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/02/10 20:43:22 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/02/24 18:22:32 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,9 @@ void	ra(t_list **stack_a);
 void	rb(t_list **stack_b);
 void	rr(t_list **stack_a, t_list **stack_b);
 
+void	ft_cost_algorithm(t_list **stack_a, t_list **stack_b);
+
+
 void	print_list(t_list *stack_a, t_list *stack_b);
 void	ft_sort_special_three(t_list **stack_a, t_list **stack_b);
 void	ft_sort_three_B(t_list **stack_b);
@@ -77,7 +80,7 @@ void	ft_sort_optimize(t_list **stack_a, t_list **stack_b);
 void	ft_quick_sort_a(t_list **stack_a, t_list **stack_b, int part, t_stack *stacks);
 void	ft_quick_sort_b(t_list **stack_a, t_list **stack_b, t_stack *stacks);
 int	ft_get_partition_median_alternative(t_list *stack, int len);
-
+void	ft_rotate_until_last_is_last(t_list **stack_a);
 int		ft_get_partition_median(t_list *stack, int len);
 void	ft_quick_sort(t_list **stack_a, t_list **stack_b);
 int		ft_get_median(t_list *stack);

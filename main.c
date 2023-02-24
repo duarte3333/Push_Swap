@@ -6,7 +6,7 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 15:21:34 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/02/22 17:47:08 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/02/24 17:18:59 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,20 +36,21 @@ int	main(int ac, char **av)
 		printf("Error\n");
 	else
 	{
-		// if (ac == 4)
-		// {
-		// 	ft_sort_three(&stack_a);
-		// }
-		// else if (ac == 6)
-		// 	ft_sort_five(&stack_a, &stack_b);
-		//else
+		if (ac == 4)
+		{
+			ft_sort_three(&stack_a);
+		}
+		else if (ac == 6)
+			ft_sort_five(&stack_a, &stack_b);
+		else
+			ft_cost_algorithm(&stack_a, &stack_b);
 		// ft_set_variables(&stacks, &stack_a, &stack_b);
 		// printf("size b %i\n", stacks.current_size_b);
 		// pb(&stack_a, &stack_b);
 		// printf("size b %i \n", stacks.current_size_b);
 		//print_list(stack_a, stack_b);
-		ft_set_variables(&stacks, &stack_a, &stack_b);
-		ft_quick_sort_a(&stack_a, &stack_b, 0, &stacks);
+		//ft_set_variables(&stacks, &stack_a, &stack_b);
+		//ft_quick_sort_a(&stack_a, &stack_b, 0, &stacks);
 		//ft_sort_optimize(&stack_a, &stack_b);
 		//print_list(stack_a, stack_b);
 		//ft_quick_sort(&stack_a, &stack_b);

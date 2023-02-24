@@ -27,7 +27,8 @@ SRCS = main.c \
 	   Operations/rotate.c \
 	   swap_anytwo.c \
 	   chunk.c \
-	   cost.c 
+	   cost.c \
+	   cost_algorithm.c
 
 
 OBJS	= ${SRCS:.c=.o}
