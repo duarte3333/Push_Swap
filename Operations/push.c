@@ -20,9 +20,11 @@ void	pa(t_list **stack_a, t_list **stack_b)
 	printf("pa\n");
 }
 
+
 //Take the first element at the top of a and put it at the top of b.
 void	pb(t_list **stack_a, t_list **stack_b)
 {
 	ft_push(stack_b, stack_a);
 	printf("pb\n");
 }
+

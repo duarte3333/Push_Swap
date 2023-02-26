@@ -69,8 +69,6 @@ void	rr(t_list **stack_a, t_list **stack_b);
 void	ft_cost_algorithm(t_list **stack_a, t_list **stack_b);
 void 	quicksort(int array[], int length);
 void	ft_sort_special_five(t_list **stack_a, t_list **stack_b);
-
-
 void	print_list(t_list *stack_a, t_list *stack_b);
 void	ft_sort_special_three(t_list **stack_a, t_list **stack_b);
 void	ft_sort_three_B(t_list **stack_b);

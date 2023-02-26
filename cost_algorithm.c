@@ -247,16 +247,11 @@ void	ft_cost_algorithm(t_list **stack_a, t_list **stack_b)
 
 	int *arr_last_five;
 	int average;
+	int	moves[10000];
+	int i;
+
+	i = 0;
 	arr_last_five = ft_previous_sort(*stack_a);
-	// int i = 0;
-	// while (i < 5)
-	// {
-	// 	printf("array %i\n", arr_last_five[i]);
-	// 	i++;
-	// }
-	
-	
-	//a_to_b(stack_a, stack_b, arr_last_five);
 	average = ft_get_dynamic_average(*stack_a);
 	while (ft_lstsize(*stack_a) > 5)
 	{
@@ -270,17 +265,6 @@ void	ft_cost_algorithm(t_list **stack_a, t_list **stack_b)
 		}
 	}
 	free(arr_last_five);
-	// while (ft_lstsize(*stack_a) > 5)
-	// {
-	// 	ft_put_top_a(stack_a, ft_get_index(ft_get_min(*stack_a), *stack_a));
-	// 	pb(stack_a, stack_b);
-	// }
-	// ft_sort_five(stack_a, stack_b);
-	// pa(stack_a, stack_b);
-	// pa(stack_a, stack_b);
-	// pa(stack_a, stack_b);
-	// pa(stack_a, stack_b);
-	// pa(stack_a, stack_b);
 	ft_sort_five(stack_a, stack_b);
 	//print_list(*stack_a, *stack_b);
 	while (ft_lstsize(*stack_b) > 0)
