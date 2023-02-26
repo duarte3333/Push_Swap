@@ -56,19 +56,19 @@ int	ft_calculate_cost_up(int size, int index)
 
 int ft_get_best_buddy(t_list **stack_a, int nb)
 {
-	int best_buddy;
+	long int best_buddy;
 	int counter;
 	t_list *temp;
 
 	counter = INT_MAX;		
 	//printf("counter %i\n", counter);
-	best_buddy = 0;
+	best_buddy = INT_MAX + 1;
 	temp = *stack_a;
 	while (*stack_a)
 	{
 		//printf("counter %i\n", counter);
 		//printf("best_buddy %i\n", best_buddy);
-		if (((*stack_a)->content - nb) < counter && ((*stack_a)->content - nb) > 0)
+		if (((*stack_a)->content - nb) < counter && ((*stack_a)->content > nb))
 		{
 			counter = (*stack_a)->content - nb;
 			best_buddy = (*stack_a)->content;
@@ -76,7 +76,7 @@ int ft_get_best_buddy(t_list **stack_a, int nb)
 		(*stack_a) = (*stack_a)->next;
 	}
 	*stack_a = temp;
-	if (best_buddy == 0)
+	if (best_buddy == INT_MAX + 1)
 		return (-1);
 	//printf("best_buddy %i\n", best_buddy);
 	//printf("index %i\n", ft_get_index(best_buddy, *stack_a));
@@ -118,7 +118,7 @@ int	*ft_get_cost_best_buddy(t_list **stack_a, t_list **stack_b)
 			{	
 				final_nb = index_nb;
 				final_bf = index_bf;
-				best = cost_bf + cost_bf;
+				best = cost_nb + cost_bf;
 				//printf("final bf %i, final nb %i\n\n", final_bf, final_nb);
 			}
 		}
@@ -145,13 +145,14 @@ void	a_to_b(t_list **stack_a, t_list **stack_b, int *arr_last_five)
 	int flag;
 
 	min = ft_get_min(*stack_a);
-	size_chunk = 50;
+	size_chunk = ft_lstsize(*stack_a) / 2;
 	l = min;
 	r = min + size_chunk - 1;
 	j = 0;
 	while (ft_lstsize(*stack_a) > 5)
 	{	
 		//printf("nb %i\n", (*stack_a)->content);
+		//print_list(*stack_a, *stack_b);
 		if (ft_get_int(ft_get_index(0, *stack_a), *stack_a) >= l \
 			&& ft_get_int(ft_get_index(0, *stack_a), *stack_a) <= r)
 		{
@@ -222,10 +223,30 @@ int	ft_nb_in_last_five(int nb, int *array)
 	return (0);
 }
 
+
+void	ft_get_dynamic_average(t_list *stack_a)
+{
+	int i;
+	int sum;
+	int average;
+	int size;
+
+	sum = 0;
+	while (stack_a)
+	{
+		sum += stack_a->content;
+		stack_a = stack_a->next;
+	}
+	size = ft_lstsize(stack_a);
+	average = sum / size;
+	return (average);	
+}
+
 void	ft_cost_algorithm(t_list **stack_a, t_list **stack_b)
 {
 
 	int *arr_last_five;
+	int average;
 	arr_last_five = ft_previous_sort(*stack_a);
 	// int i = 0;
 	// while (i < 5)
@@ -236,14 +257,28 @@ void	ft_cost_algorithm(t_list **stack_a, t_list **stack_b)
 	
 	
 	//a_to_b(stack_a, stack_b, arr_last_five);
+	average = ft_get_dynamic_average(stack_a);
 	while (ft_lstsize(*stack_a) > 5)
 	{
+		// if (ft_nb_in_last_five((*stack_a)->content, arr_last_five))
+		// 	ra(stack_a);
 		if (ft_nb_in_last_five((*stack_a)->content, arr_last_five))
 			ra(stack_a);
 		else
 			pb(stack_a, stack_b);
 	}
 	free(arr_last_five);
+	// while (ft_lstsize(*stack_a) > 5)
+	// {
+	// 	ft_put_top_a(stack_a, ft_get_index(ft_get_min(*stack_a), *stack_a));
+	// 	pb(stack_a, stack_b);
+	// }
+	// ft_sort_five(stack_a, stack_b);
+	// pa(stack_a, stack_b);
+	// pa(stack_a, stack_b);
+	// pa(stack_a, stack_b);
+	// pa(stack_a, stack_b);
+	// pa(stack_a, stack_b);
 	ft_sort_five(stack_a, stack_b);
 	//print_list(*stack_a, *stack_b);
 	while (ft_lstsize(*stack_b) > 0)
