@@ -224,7 +224,7 @@ int	ft_nb_in_last_five(int nb, int *array)
 }
 
 
-void	ft_get_dynamic_average(t_list *stack_a)
+int	ft_get_dynamic_average(t_list *stack_a)
 {
 	int i;
 	int sum;
@@ -232,12 +232,12 @@ void	ft_get_dynamic_average(t_list *stack_a)
 	int size;
 
 	sum = 0;
+	size = ft_lstsize(stack_a);
 	while (stack_a)
 	{
 		sum += stack_a->content;
 		stack_a = stack_a->next;
 	}
-	size = ft_lstsize(stack_a);
 	average = sum / size;
 	return (average);	
 }
@@ -257,15 +257,17 @@ void	ft_cost_algorithm(t_list **stack_a, t_list **stack_b)
 	
 	
 	//a_to_b(stack_a, stack_b, arr_last_five);
-	average = ft_get_dynamic_average(stack_a);
+	average = ft_get_dynamic_average(*stack_a);
 	while (ft_lstsize(*stack_a) > 5)
 	{
-		// if (ft_nb_in_last_five((*stack_a)->content, arr_last_five))
-		// 	ra(stack_a);
-		if (ft_nb_in_last_five((*stack_a)->content, arr_last_five))
+		if (ft_nb_in_last_five((*stack_a)->content, arr_last_five) || \
+			(*stack_a)->content > average)
 			ra(stack_a);
 		else
+		{
 			pb(stack_a, stack_b);
+			average = ft_get_dynamic_average(*stack_a);
+		}
 	}
 	free(arr_last_five);
 	// while (ft_lstsize(*stack_a) > 5)
