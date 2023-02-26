@@ -9,26 +9,25 @@ SRCS = main.c \
 	   Aux/ft_split.c \
 	   Aux/ft_isdigit.c \
 	   Aux/ft_strlen.c \
-	   lists_aux.c \
-	   lists_aux2.c \
-	   lists_aux3.c \
-	   put_top.c \
+	   Aux/lists_aux.c \
+	   Aux/lists_aux2.c \
+	   Operations/swap.c \
+	   Operations/push.c \
+	   Operations/reverse_rotate.c \
+	   Operations/rotate.c \
 	   check_input.c \
+	   put_top.c \
 	   print_list.c \
 	   smaller_sort.c \
 	   algorithm.c \
 	   quick_sort.c \
 	   quick_sort_again.c \
+	   quick_final.c \
 	   median.c \
 	   median_partition.c \
-	   Operations/swap.c \
-	   Operations/push.c \
-	   Operations/reverse_rotate.c \
-	   Operations/rotate.c \
-	   swap_anytwo.c \
-	   chunk.c \
 	   cost.c \
-	   cost_algorithm.c
+	   cost_algorithm.c \
+	   pre_quick_sort.c
 
 
 OBJS	= ${SRCS:.c=.o}

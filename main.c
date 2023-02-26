@@ -50,7 +50,7 @@ int	main(int ac, char **av)
 		// printf("size b %i \n", stacks.current_size_b);
 		//print_list(stack_a, stack_b);
 		//ft_set_variables(&stacks, &stack_a, &stack_b);
-		//ft_quick_sort_a(&stack_a, &stack_b, 0, &stacks);
+		//ft_quick_sort_a(&stack_a, &stack_b, &stacks);
 		//ft_sort_optimize(&stack_a, &stack_b);
 		//print_list(stack_a, stack_b);
 		//ft_quick_sort(&stack_a, &stack_b);

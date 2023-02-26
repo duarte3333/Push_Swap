@@ -67,6 +67,7 @@ void	rb(t_list **stack_b);
 void	rr(t_list **stack_a, t_list **stack_b);
 
 void	ft_cost_algorithm(t_list **stack_a, t_list **stack_b);
+void 	quicksort(int array[], int length);
 
 
 void	print_list(t_list *stack_a, t_list *stack_b);
@@ -77,7 +78,7 @@ void	ft_sort_five(t_list **stack_a, t_list **stack_b);
 void	ft_sort_simple(t_list **stack_a, t_list **stack_b);
 t_list	*ft_list_loading(char **av);
 void	ft_sort_optimize(t_list **stack_a, t_list **stack_b);
-void	ft_quick_sort_a(t_list **stack_a, t_list **stack_b, int part, t_stack *stacks);
+void	ft_quick_sort_a(t_list **stack_a, t_list **stack_b, t_stack *stacks);
 void	ft_quick_sort_b(t_list **stack_a, t_list **stack_b, t_stack *stacks);
 int	ft_get_partition_median_alternative(t_list *stack, int len);
 void	ft_rotate_until_last_is_last(t_list **stack_a);

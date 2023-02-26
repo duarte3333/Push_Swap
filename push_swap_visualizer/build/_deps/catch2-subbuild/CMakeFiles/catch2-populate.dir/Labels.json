@@ -2,37 +2,37 @@
 	"sources" : 
 	[
 		{
-			"file" : "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles/catch2-populate"
+			"file" : "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles/catch2-populate"
 		},
 		{
-			"file" : "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles/catch2-populate.rule"
+			"file" : "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles/catch2-populate.rule"
 		},
 		{
-			"file" : "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles/catch2-populate-complete.rule"
+			"file" : "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles/catch2-populate-complete.rule"
 		},
 		{
-			"file" : "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-install.rule"
+			"file" : "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-build.rule"
 		},
 		{
-			"file" : "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-mkdir.rule"
+			"file" : "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-configure.rule"
 		},
 		{
-			"file" : "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-download.rule"
+			"file" : "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-download.rule"
 		},
 		{
-			"file" : "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-update.rule"
+			"file" : "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-install.rule"
 		},
 		{
-			"file" : "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-patch.rule"
+			"file" : "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-mkdir.rule"
 		},
 		{
-			"file" : "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-configure.rule"
+			"file" : "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-patch.rule"
 		},
 		{
-			"file" : "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-build.rule"
+			"file" : "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-test.rule"
 		},
 		{
-			"file" : "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-test.rule"
+			"file" : "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-update.rule"
 		}
 	],
 	"target" : 

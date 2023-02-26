@@ -1,4 +1,4 @@
-# Install script for directory: /nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-src
+# Install script for directory: /home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -37,22 +37,27 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
+# Set default install directory permissions.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+endif()
+
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build/libImGui-SFML.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build/libImGui-SFML.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-    "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-src/imgui-SFML.h"
-    "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-src/imgui-SFML_export.h"
-    "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-src/imconfig-SFML.h"
-    "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-src/imconfig.h"
-    "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-src/imgui.h"
-    "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-src/imgui_internal.h"
-    "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-src/imstb_rectpack.h"
-    "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-src/imstb_textedit.h"
-    "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-src/imstb_truetype.h"
-    "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-src/misc/cpp/imgui_stdlib.h"
+    "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-src/imgui-SFML.h"
+    "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-src/imgui-SFML_export.h"
+    "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-src/imconfig-SFML.h"
+    "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-src/imconfig.h"
+    "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-src/imgui.h"
+    "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-src/imgui_internal.h"
+    "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-src/imstb_rectpack.h"
+    "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-src/imstb_textedit.h"
+    "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-src/imstb_truetype.h"
+    "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-src/misc/cpp/imgui_stdlib.h"
     )
 endif()
 
@@ -60,7 +65,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake"
-         "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build/CMakeFiles/Export/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake")
+         "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build/CMakeFiles/Export/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML/ImGui-SFMLConfig-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -69,9 +74,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML" TYPE FILE FILES "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build/CMakeFiles/Export/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML" TYPE FILE FILES "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build/CMakeFiles/Export/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML" TYPE FILE FILES "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build/CMakeFiles/Export/lib/cmake/ImGui-SFML/ImGui-SFMLConfig-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML" TYPE FILE FILES "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build/CMakeFiles/Export/lib/cmake/ImGui-SFML/ImGui-SFMLConfig-noconfig.cmake")
   endif()
 endif()
 

@@ -22,14 +22,14 @@ function(check_file_hash has_hash hash_is_good)
   set("${has_hash}" TRUE PARENT_SCOPE)
 
   message(STATUS "verifying file...
-       file='/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip'")
+       file='/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip'")
 
-  file("" "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip" actual_value)
+  file("" "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip" actual_value)
 
   if(NOT "${actual_value}" STREQUAL "")
     set("${hash_is_good}" FALSE PARENT_SCOPE)
     message(STATUS " hash of
-    /nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip
+    /home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip
   does not match expected value
     expected: ''
       actual: '${actual_value}'")
@@ -71,7 +71,7 @@ function(sleep_before_download attempt)
   execute_process(COMMAND "${CMAKE_COMMAND}" -E sleep "${sleep_seconds}")
 endfunction()
 
-if("/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip" STREQUAL "")
+if("/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip" STREQUAL "")
   message(FATAL_ERROR "LOCAL can't be empty")
 endif()
 
@@ -79,80 +79,91 @@ if("https://github.com/SFML/SFML/releases/download/2.5.1/SFML-2.5.1-sources.zip"
   message(FATAL_ERROR "REMOTE can't be empty")
 endif()
 
-if(EXISTS "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip")
+if(EXISTS "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip")
   check_file_hash(has_hash hash_is_good)
   if(has_hash)
     if(hash_is_good)
       message(STATUS "File already exists and hash match (skip download):
-  file='/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip'
+  file='/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip'
   =''"
       )
       return()
     else()
       message(STATUS "File already exists but hash mismatch. Removing...")
-      file(REMOVE "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip")
+      file(REMOVE "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip")
     endif()
   else()
     message(STATUS "File already exists but no hash specified (use URL_HASH):
-  file='/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip'
+  file='/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip'
 Old file will be removed and new file downloaded from URL."
     )
-    file(REMOVE "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip")
+    file(REMOVE "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip")
   endif()
 endif()
 
 set(retry_number 5)
 
 message(STATUS "Downloading...
-   dst='/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip'
-   timeout='none'"
+   dst='/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip'
+   timeout='none'
+   inactivity timeout='none'"
 )
-
+set(download_retry_codes 7 6 8 15)
+set(skip_url_list)
+set(status_code)
 foreach(i RANGE ${retry_number})
-  sleep_before_download(${i})
-
+  if(status_code IN_LIST download_retry_codes)
+    sleep_before_download(${i})
+  endif()
   foreach(url https://github.com/SFML/SFML/releases/download/2.5.1/SFML-2.5.1-sources.zip)
-    message(STATUS "Using src='${url}'")
+    if(NOT url IN_LIST skip_url_list)
+      message(STATUS "Using src='${url}'")
 
-    
-    
-    
-    
+      
+      
+      
+      
 
-    file(
+      file(
         DOWNLOAD
-        "${url}" "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip"
+        "${url}" "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip"
         SHOW_PROGRESS
         # no TIMEOUT
+        # no INACTIVITY_TIMEOUT
         STATUS status
         LOG log
         
         
-    )
+        )
 
-    list(GET status 0 status_code)
-    list(GET status 1 status_string)
+      list(GET status 0 status_code)
+      list(GET status 1 status_string)
 
-    if(status_code EQUAL 0)
-      check_file_hash(has_hash hash_is_good)
-      if(has_hash AND NOT hash_is_good)
-        message(STATUS "Hash mismatch, removing...")
-        file(REMOVE "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip")
+      if(status_code EQUAL 0)
+        check_file_hash(has_hash hash_is_good)
+        if(has_hash AND NOT hash_is_good)
+          message(STATUS "Hash mismatch, removing...")
+          file(REMOVE "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip")
+        else()
+          message(STATUS "Downloading... done")
+          return()
+        endif()
       else()
-        message(STATUS "Downloading... done")
-        return()
+        string(APPEND logFailedURLs "error: downloading '${url}' failed
+        status_code: ${status_code}
+        status_string: ${status_string}
+        log:
+        --- LOG BEGIN ---
+        ${log}
+        --- LOG END ---
+        "
+        )
+      if(NOT status_code IN_LIST download_retry_codes)
+        list(APPEND skip_url_list "${url}")
+        break()
       endif()
-    else()
-      string(APPEND logFailedURLs "error: downloading '${url}' failed
-       status_code: ${status_code}
-       status_string: ${status_string}
-       log:
-       --- LOG BEGIN ---
-       ${log}
-       --- LOG END ---
-       "
-      )
     endif()
+  endif()
   endforeach()
 endforeach()
 
