@@ -13,7 +13,7 @@
 
 #include "push_swap.h"
 
-int	ft_put_top_a(t_list **lst, int index)
+int	ft_put_top_a(t_list **lst, int index, int moves[], int j)
 {
 	int	size;
 	int	i;
@@ -27,7 +27,8 @@ int	ft_put_top_a(t_list **lst, int index)
 		i = index;
 		while (i)
 		{
-			ra(lst);
+			j = ra(lst, moves, j);
+			j++;
 			i--;
 		}
 	}
@@ -36,14 +37,16 @@ int	ft_put_top_a(t_list **lst, int index)
 		i = index;
 		while (i < size)
 		{
-			rra(lst);
+			j = rra(lst, moves, j);
+			j++;
 			i++;
 		}
 	}
+	return (j);
 }
 
 
-int	ft_put_top_b(t_list **lst, int index)
+int	ft_put_top_b(t_list **lst, int index, int moves[], int j)
 {
 	int	size;
 	int	i;
@@ -56,7 +59,8 @@ int	ft_put_top_b(t_list **lst, int index)
 		i = index;
 		while (i)
 		{
-			rb(lst);
+			j = rb(lst, moves, j);
+			j++;
 			i--;
 		}
 	}
@@ -65,8 +69,10 @@ int	ft_put_top_b(t_list **lst, int index)
 		i = index;
 		while (i < size)
 		{
-			rrb(lst);
+			rrb(lst, moves, j);
+			j++;
 			i++;
 		}
 	}
+	return (j);
 }

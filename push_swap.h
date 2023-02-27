@@ -54,33 +54,34 @@ void	ft_free_stack(t_list *stack_a);
 int		ft_check_double(t_list *stack_a, int a);
 
 //moves
-void	pa(t_list **stack_a, t_list **stack_b);
-void	pb(t_list **stack_a, t_list **stack_b);
-void	sa(t_list *stack_a);
-void	sb(t_list *stack_b);
+int	pa(t_list **stack_a, t_list **stack_b, int moves[], int i);
+int	pb(t_list **stack_a, t_list **stack_b, int moves[], int i);
+int	rra(t_list **stack_a, int moves[], int i);
+int	rrb(t_list **stack_a, int moves[], int i);
+int	ra(t_list **stack_a, int moves[], int i);
+int	rb(t_list **stack_a, int moves[], int i);
+int	sa(t_list *stack_a, int moves[], int i);
+int	sb(t_list *stack_a, int moves[], int i);
+
 void	ss(t_list *stack_a, t_list *stack_b);
-void	rra(t_list **stack_a);
-void	rrb(t_list **stack_b);
 void	rrr(t_list **stack_a, t_list **stack_b);
-void	ra(t_list **stack_a);
-void	rb(t_list **stack_b);
 void	rr(t_list **stack_a, t_list **stack_b);
 
-void	ft_cost_algorithm(t_list **stack_a, t_list **stack_b);
+int	ft_cost_algorithm(t_list **stack_a, t_list **stack_b, int moves[], int i);
 void 	quicksort(int array[], int length);
 void	ft_sort_special_five(t_list **stack_a, t_list **stack_b);
 void	print_list(t_list *stack_a, t_list *stack_b);
 void	ft_sort_special_three(t_list **stack_a, t_list **stack_b);
 void	ft_sort_three_B(t_list **stack_b);
-void	ft_sort_three(t_list **stack_a);
-void	ft_sort_five(t_list **stack_a, t_list **stack_b);
+int	ft_sort_three(t_list **stack_a, int moves[], int i);
+int		ft_sort_five(t_list **stack_a, t_list **stack_b, int moves[], int i);
 void	ft_sort_simple(t_list **stack_a, t_list **stack_b);
 t_list	*ft_list_loading(char **av);
 void	ft_sort_optimize(t_list **stack_a, t_list **stack_b);
 void	ft_quick_sort_a(t_list **stack_a, t_list **stack_b, t_stack *stacks);
 void	ft_quick_sort_b(t_list **stack_a, t_list **stack_b, t_stack *stacks);
 int	ft_get_partition_median_alternative(t_list *stack, int len);
-void	ft_rotate_until_last_is_last(t_list **stack_a);
+int		ft_rotate_until_last_is_last(t_list **stack_a, int moves[], int i);
 int		ft_get_partition_median(t_list *stack, int len);
 void	ft_quick_sort(t_list **stack_a, t_list **stack_b);
 int		ft_get_median(t_list *stack);
@@ -94,8 +95,8 @@ int		smaller_chunk1(int size, int size_chunk, t_list **stack_a);
 int		smaller_chunk2(int size, int size_chunk, t_list **stack_a);
 int		ft_cost_top(t_list **lst, int index);
 int		ft_put_top_optimized(int size, int size_chunk, t_list **stack_a);
-int		ft_put_top_a(t_list **lst, int index);
-int		ft_put_top_b(t_list **lst, int index);
+int		ft_put_top_a(t_list **lst, int index, int moves[], int i);
+int		ft_put_top_b(t_list **lst, int index, int moves[], int i);
 void	ft_set_variables(t_stack *stacks, t_list **stack_a, t_list **stack_b);
 
 #endif

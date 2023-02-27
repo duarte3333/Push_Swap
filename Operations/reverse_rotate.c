@@ -16,16 +16,20 @@ void	ft_reverse_rotate(t_list **stack)
 	*stack = temp;
 }
 
-void	rra(t_list **stack_a)
+int	rra(t_list **stack_a, int moves[], int i)
 {
 	ft_reverse_rotate(stack_a);
-	printf("rra\n");
+	moves[i] = 9;
+	i++;
+	return (i);
 }
 
-void	rrb(t_list **stack_b)
+int	rrb(t_list **stack_b, int moves[], int i)
 {
 	ft_reverse_rotate(stack_b);
-	printf("rrb\n");
+	moves[i] = 10;
+	i++;
+	return (i);
 }
 
 void	rrr(t_list **stack_a, t_list **stack_b)

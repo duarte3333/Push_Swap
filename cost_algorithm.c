@@ -12,35 +12,6 @@
 
 #include "push_swap.h"
 
-// void	ft_rotate_until_last_is_last(t_list **stack_a)
-// {
-// 	int max;
-// 	int index;
-// 	int nb_rotations;
-
-// 	//printf("RO TA TE\n");
-// 	max = ft_get_max(*stack_a);
-// 	index = ft_get_index(max, *stack_a) + 1;
-// 	nb_rotations = ft_lstsize(*stack_a) - index;
-// 	if (index < nb_rotations)
-// 	{	
-// 		while (index)
-// 		{
-// 			ra(stack_a);
-// 			index--;
-// 		}
-// 	}
-// 	else
-// 	{
-// 		while (nb_rotations)
-// 		{
-// 			rra(stack_a);
-// 			nb_rotations--;
-// 		}
-// 	}
-// }
-
-
 int	ft_calculate_cost_up(int size, int index)
 {
 	int counter;
@@ -83,7 +54,7 @@ int ft_get_best_buddy(t_list **stack_a, int nb)
 	return (ft_get_index(best_buddy, *stack_a));
 }
 
-int	*ft_get_cost_best_buddy(t_list **stack_a, t_list **stack_b)
+int	*ft_get_cost_best_buddy(t_list **stack_a, t_list **stack_b, int moves[], int i)
 {
 	int index_bf;
 	int cost_bf;
@@ -127,52 +98,53 @@ int	*ft_get_cost_best_buddy(t_list **stack_a, t_list **stack_b)
 		index_nb++;
 	}
 	*stack_b = temp;
-	ft_put_top_a(stack_a, final_bf);
-	ft_put_top_b(stack_b, final_nb);
+	i = ft_put_top_a(stack_a, final_bf, moves, i);
+	i = ft_put_top_b(stack_b, final_nb, moves, i);
 	//print_list(*stack_a, *stack_b);
-	pa(stack_a, stack_b);
+	i = pa(stack_a, stack_b, moves, i);
+	return (i);
 	//print_list(*stack_a, *stack_b);
 
 }
 
-void	a_to_b(t_list **stack_a, t_list **stack_b, int *arr_last_five)
-{
-	int	min;
-	int	size_chunk;
-	int	l;
-	int	r;
-	int j;
-	int flag;
+// void	a_to_b(t_list **stack_a, t_list **stack_b, int *arr_last_five)
+// {
+// 	int	min;
+// 	int	size_chunk;
+// 	int	l;
+// 	int	r;
+// 	int j;
+// 	int flag;
 
-	min = ft_get_min(*stack_a);
-	size_chunk = ft_lstsize(*stack_a) / 2;
-	l = min;
-	r = min + size_chunk - 1;
-	j = 0;
-	while (ft_lstsize(*stack_a) > 5)
-	{	
-		//printf("nb %i\n", (*stack_a)->content);
-		//print_list(*stack_a, *stack_b);
-		if (ft_get_int(ft_get_index(0, *stack_a), *stack_a) >= l \
-			&& ft_get_int(ft_get_index(0, *stack_a), *stack_a) <= r)
-		{
-			if (ft_nb_in_last_five((*stack_a)->content, arr_last_five))
-				ra(stack_a);
-			else 
-			{
-				pb(stack_a, stack_b);
-				j++;
-			}
-		}
-		if (j == (size_chunk))
-		{
-			l += size_chunk;
-			r += size_chunk;
-			j = 0;
-		}
-		ra(stack_a);
-	}
-}
+// 	min = ft_get_min(*stack_a);
+// 	size_chunk = ft_lstsize(*stack_a) / 2;
+// 	l = min;
+// 	r = min + size_chunk - 1;
+// 	j = 0;
+// 	while (ft_lstsize(*stack_a) > 5)
+// 	{	
+// 		//printf("nb %i\n", (*stack_a)->content);
+// 		//print_list(*stack_a, *stack_b);
+// 		if (ft_get_int(ft_get_index(0, *stack_a), *stack_a) >= l \
+// 			&& ft_get_int(ft_get_index(0, *stack_a), *stack_a) <= r)
+// 		{
+// 			if (ft_nb_in_last_five((*stack_a)->content, arr_last_five))
+// 				ra(stack_a);
+// 			else 
+// 			{
+// 				pb(stack_a, stack_b);
+// 				j++;
+// 			}
+// 		}
+// 		if (j == (size_chunk))
+// 		{
+// 			l += size_chunk;
+// 			r += size_chunk;
+// 			j = 0;
+// 		}
+// 		ra(stack_a);
+// 	}
+// }
 
 
 int	*ft_previous_sort(t_list *stack_a)
@@ -242,34 +214,33 @@ int	ft_get_dynamic_average(t_list *stack_a)
 	return (average);	
 }
 
-void	ft_cost_algorithm(t_list **stack_a, t_list **stack_b)
+
+int	ft_cost_algorithm(t_list **stack_a, t_list **stack_b, int moves[], int i)
 {
 
 	int *arr_last_five;
 	int average;
-	int	moves[10000];
-	int i;
 
-	i = 0;
 	arr_last_five = ft_previous_sort(*stack_a);
 	average = ft_get_dynamic_average(*stack_a);
 	while (ft_lstsize(*stack_a) > 5)
 	{
 		if (ft_nb_in_last_five((*stack_a)->content, arr_last_five) || \
 			(*stack_a)->content > average)
-			ra(stack_a);
+			i = ra(stack_a, moves, i);
 		else
 		{
-			pb(stack_a, stack_b);
+			i = pb(stack_a, stack_b, moves, i);
 			average = ft_get_dynamic_average(*stack_a);
 		}
 	}
 	free(arr_last_five);
-	ft_sort_five(stack_a, stack_b);
+	i = ft_sort_five(stack_a, stack_b, moves, i);
 	//print_list(*stack_a, *stack_b);
 	while (ft_lstsize(*stack_b) > 0)
-		ft_get_cost_best_buddy(stack_a, stack_b);
-	ft_rotate_until_last_is_last(stack_a);
+		i = ft_get_cost_best_buddy(stack_a, stack_b, moves, i);
+	i = ft_rotate_until_last_is_last(stack_a, moves, i);
+	return (i);
 	//print_list(*stack_a, *stack_b);
 }
 

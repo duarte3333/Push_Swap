@@ -12,17 +12,21 @@ void	ft_swap(t_list *stack)
 }
 
 //Swap the first 2 elements at the top of stack a.
-void	sa(t_list *stack_a)
+int	sa(t_list *stack_a, int moves[], int i)
 {
 	ft_swap(stack_a);
-	printf("sa\n");
+	moves[i] = 1;
+	i++;
+	return (i);
 }
 
 //Swap the first 2 elements at the top of stack b.
-void	sb(t_list *stack_b)
+int sb(t_list *stack_b, int moves[], int i)
 {
 	ft_swap(stack_b);
-	printf("sb\n");
+	moves[i] = 2;
+	i++;
+	return (i);
 }
 
 void	ss(t_list *stack_a, t_list *stack_b)
