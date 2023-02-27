@@ -16,18 +16,13 @@ SRCS = main.c \
 	   Operations/reverse_rotate.c \
 	   Operations/rotate.c \
 	   check_input.c \
-	   put_top.c \
-	   print_list.c \
-	   smaller_sort.c \
-	   algorithm.c \
-	   quick_sort.c \
-	   quick_sort_again.c \
-	   quick_final.c \
-	   median.c \
-	   median_partition.c \
-	   cost.c \
 	   cost_algorithm.c \
-	   pre_quick_sort.c
+	   cost_aux_functions.c \
+	   load_list.c \
+	   pre_quick_sort.c \
+	   print_list.c \
+	   put_top.c \
+	   smaller_sort.c 
 
 
 OBJS	= ${SRCS:.c=.o}

@@ -12,35 +12,104 @@
 
 #include "push_swap.h"
 
-void	ft_set_variables(t_stack *stacks, t_list **stack_a, t_list **stack_b)
+int	ft_optimize(int moves[], int i)
 {
-	stacks->current_size_a = ft_lstsize(*stack_a);
-	stacks->current_size_b = ft_lstsize(*stack_b);
+	if ((moves[i] == 1 && moves[i + 1] == 2) \
+	|| (moves[i] == 2 && moves[i + 1] == 1) )
+	{
+		printf("ss\n");
+		return (1);
+	}
+	else if ((moves[i] == 6 && moves[i + 1] == 7) \
+	|| (moves[i] == 7 && moves[i + 1] == 6))
+	{
+		printf("rr\n");
+		return (1);
+	}
+	else if ((moves[i] == 9 && moves[i + 1] == 10) \
+	|| (moves[i] == 10 && moves[i + 1] == 9))
+	{
+		printf("rrr\n");
+		return (1);
+	}
+	else 
+		return (0);
+}
+
+int	ft_erase_zeros(int moves[],int final_moves[], int i)
+{
+	int j;
+	int l;
+
+	j = 0;
+	l = 0;
+	while (l < i)
+	{
+		while (moves[l] == 0)
+			l++;
+		final_moves[j] = moves[l];
+		j++;
+		l++;
+	}
+	return (l);
+	// j = 0;
+	// while (j < i)
+	// {
+	// 	printf("%i\n", final_moves[j]);
+	// 	j++;
+	// }
 }
 
 void	ft_print_moves(int moves[], int i)
 {
 	int j;
-
+	int flag;
+	int fmoves[10000];
+	flag = -1;
 	j = 0;
-	while (j < i)
+
+	ft_erase_zeros(moves, fmoves, i);
+	while (j <= i)
 	{
-		if (moves[j] == 1)
+		//printf("J %i\n", j);
+		//printf("move %i\n", fmoves[j]);
+
+		if ((fmoves[j] == 1 && fmoves[j + 1] == 2) \
+		|| (fmoves[j] == 2 && fmoves[j + 1] == 1) )
+		{
+			printf("ss\n");
+			j++;
+		}
+		else if ((fmoves[j] == 6 && fmoves[j + 1] == 7) \
+		|| (fmoves[j] == 7 && fmoves[j + 1] == 6))
+		{
+			printf("rr\n");
+			j++;
+		}
+		else if ((fmoves[j] == 9 && fmoves[j + 1] == 10) \
+		|| (fmoves[j] == 10 && fmoves[j + 1] == 9))
+		{
+			printf("rrr\n");
+			j++;
+		}
+		else if (fmoves[j] == 1)
 			printf("sa\n");
-		else if (moves[j] == 2)
+		else if (fmoves[j] == 2)
 			printf("sb\n");
-		else if (moves[j] == 4)
+		else if (fmoves[j] == 4)
 			printf("pa\n");
-		else if (moves[j] == 5)
+		else if (fmoves[j] == 5)
 			printf("pb\n");
-		else if (moves[j] == 6)
+		else if (fmoves[j] == 6)
 			printf("ra\n");
-		else if (moves[j] == 7)
+		else if (fmoves[j] == 7)
 			printf("rb\n");
-		else if (moves[j] == 9)
+		else if (fmoves[j] == 9)
 			printf("rra\n");
-		else if (moves[j] == 10)
+		else if (fmoves[j] == 10)
 			printf("rrb\n");
+		// if (flag == 1)
+		// 	j++;
 		j++;
 	}
 }
@@ -49,8 +118,7 @@ int	main(int ac, char **av)
 {
 	t_list	*stack_a;
 	t_list	*stack_b;
-	static	t_stack stacks;	
-	int	moves[10000];
+	static int	moves[10000];
 	int i;
 
 	i = 0;

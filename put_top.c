@@ -18,7 +18,6 @@ int	ft_put_top_a(t_list **lst, int index, int moves[], int j)
 	int	size;
 	int	i;
 
-	//printf("index: %i\n", index);
 	size = ft_lstsize(*lst);
 	if (index == -1)
 		return (-1);
