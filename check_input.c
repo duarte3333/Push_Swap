@@ -35,8 +35,10 @@ int	ft_check_nb(char *str_nb)
 	i = -1;
 	if (str_nb[0] == '-')
 		i++;
+	if (str_nb[0] == '-' && str_nb[1] == 0)
+		return (0);
 	while (str_nb[++i])
-	{
+	{	
 		if (!ft_isdigit(str_nb[i]))
 			return (0);
 	}
@@ -57,11 +59,9 @@ void	ft_free_stack(t_list *stack_a)
 	}
 }
 
-t_list	*ft_free_all(char **list_str, t_list *stack_a)
+t_list	*ft_free_all(char **list_str, t_list *stack_a, int i)
 {
-	int		i;
-
-	i = -1;
+	i--;
 	while (list_str[++i])
 		free(list_str[i]);
 	free(list_str);

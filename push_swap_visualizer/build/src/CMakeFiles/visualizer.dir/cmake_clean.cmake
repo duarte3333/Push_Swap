@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "../bin/visualizer"
   "../bin/visualizer.pdb"
   "CMakeFiles/visualizer.dir/main.cpp.o"
-  "CMakeFiles/visualizer.dir/main.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

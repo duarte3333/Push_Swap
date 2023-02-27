@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algorithm.c                                        :+:      :+:    :+:   */
+/*   load_list.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 17:09:25 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/02/11 18:19:01 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/02/27 20:37:45 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ t_list	*ft_list_loading(char **av)
 		while (list_str[++j])
 		{
 			if (!ft_check_nb(list_str[j]))
-				return (ft_free_all(list_str, stack_a));
+				return (ft_free_all(list_str, stack_a, j));
 			if (!ft_check_double(stack_a, ft_atoi(list_str[j])))
-				return (ft_free_all(list_str, stack_a));
+				return (ft_free_all(list_str, stack_a, j));
 			ft_lstadd_back(&stack_a, ft_lstnew((int)ft_atoi(list_str[j])));
 			free(list_str[j]);
 		}

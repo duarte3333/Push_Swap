@@ -6,13 +6,24 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 15:05:35 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/02/10 15:07:24 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:34:26 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 
+int ft_sort_four(t_list **stack_a, t_list **stack_b, int moves[], int i)
+{
+	int j;
+
+	j =  ft_get_index(ft_get_min(*stack_a), *stack_a);
+	i =	 ft_put_top_a(stack_a, j, moves, i);
+	i = pb(stack_a, stack_b, moves, i);
+	i = ft_sort_three(stack_a, moves, i);
+	i = pa(stack_a, stack_b, moves, i);
+	return (i);
+}
 
 int	ft_sort_three(t_list **stack_a, int moves[], int i)
 {

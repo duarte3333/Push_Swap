@@ -6,7 +6,7 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 18:29:15 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/02/24 18:22:32 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/02/27 21:12:48 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 int		ft_get_int(int index, t_list *lst);
 int		ft_check_limits(char *str);
 int		ft_check_nb(char *str_nb);
-t_list	*ft_free_all(char **list_str, t_list *stack_a);
+t_list	*ft_free_all(char **list_str, t_list *stack_a, int i);
 void	ft_free_stack(t_list *stack_a);
 int		ft_check_double(t_list *stack_a, int a);
 
@@ -56,11 +56,9 @@ void	rr(t_list **stack_a, t_list **stack_b);
 
 
 //Algorithm
-void 	quicksort(int array[], int length);
-int		*ft_previous_sort(t_list *stack_a);
-int		ft_nb_in_last_five(int nb, int *array);
 int		ft_get_dynamic_average(t_list *stack_a);
 int		ft_sort_three(t_list **stack_a, int moves[], int i);
+int 	ft_sort_four(t_list **stack_a, t_list **stack_b, int moves[], int i);
 int		ft_sort_five(t_list **stack_a, t_list **stack_b, int moves[], int i);
 int		ft_put_top_a(t_list **lst, int index, int moves[], int i);
 int		ft_put_top_b(t_list **lst, int index, int moves[], int i);

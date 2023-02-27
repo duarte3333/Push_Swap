@@ -1,4 +1,4 @@
-# Install script for directory: /home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/sfml-src/src/SFML
+# Install script for directory: /nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/sfml-src/src/SFML
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -37,16 +37,11 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/sfml-build/src/SFML/System/cmake_install.cmake")
-  include("/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/sfml-build/src/SFML/Window/cmake_install.cmake")
-  include("/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/sfml-build/src/SFML/Graphics/cmake_install.cmake")
+  include("/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/sfml-build/src/SFML/System/cmake_install.cmake")
+  include("/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/sfml-build/src/SFML/Window/cmake_install.cmake")
+  include("/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/sfml-build/src/SFML/Graphics/cmake_install.cmake")
 
 endif()
 

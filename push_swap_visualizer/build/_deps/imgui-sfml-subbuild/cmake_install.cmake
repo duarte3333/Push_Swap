@@ -1,4 +1,4 @@
-# Install script for directory: /home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild
+# Install script for directory: /nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

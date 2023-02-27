@@ -2,7 +2,7 @@ NAME = push_swap
 
 CC = cc
 
-CFLAGS = -O3 -Wall -Wextra -fsanitize=address -g
+CFLAGS = -O3 -Wall -Wextra -Werror -fsanitize=address -g
 
 SRCS = main.c \
 	   Aux/ft_atoi.c \
@@ -19,7 +19,6 @@ SRCS = main.c \
 	   cost_algorithm.c \
 	   cost_aux_functions.c \
 	   load_list.c \
-	   pre_quick_sort.c \
 	   print_list.c \
 	   put_top.c \
 	   smaller_sort.c 

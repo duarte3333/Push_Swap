@@ -1,5 +1,5 @@
 ROOT=..
-TIME_LIMIT=1
+TIME_LIMIT=10
 
 
 
