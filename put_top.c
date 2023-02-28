@@ -27,7 +27,6 @@ int	ft_put_top_a(t_list **lst, int index, int moves[], int j)
 		while (i)
 		{
 			j = ra(lst, moves, j);
-			j++;
 			i--;
 		}
 	}
@@ -37,7 +36,6 @@ int	ft_put_top_a(t_list **lst, int index, int moves[], int j)
 		while (i < size)
 		{
 			j = rra(lst, moves, j);
-			j++;
 			i++;
 		}
 	}
@@ -59,7 +57,6 @@ int	ft_put_top_b(t_list **lst, int index, int moves[], int j)
 		while (i)
 		{
 			j = rb(lst, moves, j);
-			j++;
 			i--;
 		}
 	}
@@ -68,8 +65,7 @@ int	ft_put_top_b(t_list **lst, int index, int moves[], int j)
 		i = index;
 		while (i < size)
 		{
-			rrb(lst, moves, j);
-			j++;
+			j = rrb(lst, moves, j);
 			i++;
 		}
 	}

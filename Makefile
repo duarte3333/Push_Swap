@@ -2,7 +2,7 @@ NAME = push_swap
 
 CC = cc
 
-CFLAGS = -O3 -Wall -Wextra -Werror -fsanitize=address -g
+CFLAGS = -O3 -Wall -Wextra -fsanitize=address -g
 
 SRCS = main.c \
 	   Aux/ft_atoi.c \

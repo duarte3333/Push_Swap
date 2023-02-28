@@ -36,66 +36,46 @@ int	ft_optimize(int moves[], int i)
 		return (0);
 }
 
-int	ft_erase_zeros(int moves[],int final_moves[], int i)
-{
-	int j;
-	int l;
-
-	j = 0;
-	l = 0;
-	while (l < i)
-	{
-		while (moves[l] == 0)
-			l++;
-		final_moves[j] = moves[l];
-		j++;
-		l++;
-	}
-	return (l);
-}
-
 void	ft_print_moves(int moves[], int i)
 {
 	int j;
-	int fmoves[3999999699];
 	j = 0;
 
-	ft_erase_zeros(moves, fmoves, i);
 	while (j <= i)
 	{
-		if ((fmoves[j] == 1 && fmoves[j + 1] == 2) \
-		|| (fmoves[j] == 2 && fmoves[j + 1] == 1) )
+		if ((moves[j] == 1 && moves[j + 1] == 2) \
+		|| (moves[j] == 2 && moves[j + 1] == 1) )
 		{
 			printf("ss\n");
 			j++;
 		}
-		else if ((fmoves[j] == 6 && fmoves[j + 1] == 7) \
-		|| (fmoves[j] == 7 && fmoves[j + 1] == 6))
+		else if ((moves[j] == 6 && moves[j + 1] == 7) \
+		|| (moves[j] == 7 && moves[j + 1] == 6))
 		{
 			printf("rr\n");
 			j++;
 		}
-		else if ((fmoves[j] == 9 && fmoves[j + 1] == 10) \
-		|| (fmoves[j] == 10 && fmoves[j + 1] == 9))
+		else if ((moves[j] == 9 && moves[j + 1] == 10) \
+		|| (moves[j] == 10 && moves[j + 1] == 9))
 		{
 			printf("rrr\n");
 			j++;
 		}
-		else if (fmoves[j] == 1)
+		else if (moves[j] == 1)
 			printf("sa\n");
-		else if (fmoves[j] == 2)
+		else if (moves[j] == 2)
 			printf("sb\n");
-		else if (fmoves[j] == 4)
+		else if (moves[j] == 4)
 			printf("pa\n");
-		else if (fmoves[j] == 5)
+		else if (moves[j] == 5)
 			printf("pb\n");
-		else if (fmoves[j] == 6)
+		else if (moves[j] == 6)
 			printf("ra\n");
-		else if (fmoves[j] == 7)
+		else if (moves[j] == 7)
 			printf("rb\n");
-		else if (fmoves[j] == 9)
+		else if (moves[j] == 9)
 			printf("rra\n");
-		else if (fmoves[j] == 10)
+		else if (moves[j] == 10)
 			printf("rrb\n");
 		j++;
 	}
@@ -122,7 +102,7 @@ int	main(int ac, char **av)
 {
 	t_list	*stack_a;
 	t_list	*stack_b;
-	static int	moves[3999999699];
+	static int	moves[999999];
 	int i;
 
 	i = 0;
