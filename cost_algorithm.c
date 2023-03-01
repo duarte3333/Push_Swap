@@ -26,11 +26,11 @@ int	ft_calculate_cost_up(int size, int index)
 	return (counter);
 }
 
-int ft_get_best_buddy(t_list **stack_a, int nb)
+int ft_get_best_buddy(t_list **stack_a, long long nb)
 {
-	long long best_buddy;
-	long long counter;
-	long long tmp;
+	long int best_buddy;
+	long int counter;
+	long int tmp;
 	t_list *temp;
 
 	counter = __LONG_LONG_MAX__;	
@@ -38,13 +38,14 @@ int ft_get_best_buddy(t_list **stack_a, int nb)
 	temp = *stack_a;
 	while (*stack_a)
 	{
-		//printf("counter %li\n", counter);
+		//printf("nb em A %i\n", (*stack_a)->content);
 		tmp = (*stack_a)->content - nb;
-		//printf("TMP %li\n", tmp);
+		//printf("diff %li < counter %li\n", tmp, counter);
 		//printf("best byddy %li\n", best_buddy);
-		if (tmp < counter && ((*stack_a)->content > nb))
+		if ((tmp < counter) && ((*stack_a)->content > nb))
 		{
-			counter = (*stack_a)->content - nb;
+			//printf("oi\n");
+			counter = tmp;
 			best_buddy = (*stack_a)->content;
 		}
 		(*stack_a) = (*stack_a)->next;
@@ -86,13 +87,13 @@ int	ft_get_cost_best_buddy(t_list **stack_a, t_list **stack_b, char moves[], int
 			cost_nb = ft_calculate_cost_up(size_b, index_nb);
 			if ((cost_bf + cost_nb) < best && (cost_bf + cost_nb) >= 0)
 			{	
-				// printf("cost_bf: %i\n", cost_bf);
-				// printf("cost_nb: %i\n", cost_nb);
+				//printf("cost_bf: %i\n", cost_bf);
+				//printf("cost_nb: %i\n", cost_nb);
 				final_nb = index_nb;
 				final_bf = index_bf;
 				best = cost_nb + cost_bf;
-				// printf("final_nb %i", final_nb);
-				// printf("final_bf %i", final_bf);
+				//printf("final_nb %i", final_nb);
+				//printf("final_bf %i", final_bf);
 			}
 		}
 		(*stack_b) = (*stack_b)->next;
