@@ -14,20 +14,20 @@ void	ft_push(t_list **stack_get, t_list **stack_give)
 
 
 //Take the first element at the top of b and put it at the top of a
-int	pa(t_list **stack_a, t_list **stack_b, int moves[], int i)
+int	pa(t_list **stack_a, t_list **stack_b, char moves[], int i)
 {
 	ft_push(stack_a, stack_b);
-	moves[i] = 4;
+	moves[i] = '4';
 	i++;
 	return (i);
 }
 
 
 //Take the first element at the top of a and put it at the top of b.
-int	pb(t_list **stack_a, t_list **stack_b, int moves[], int i)
+int	pb(t_list **stack_a, t_list **stack_b, char moves[], int i)
 {
 	ft_push(stack_b, stack_a);
-	moves[i] = 5;
+	moves[i] = '5';
 	i++;
 	return (i);
 }

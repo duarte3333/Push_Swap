@@ -1,4 +1,4 @@
-# Install script for directory: /nfs/homes/dsa-mora/42lisboa/push_swap/push_swap_visualizer/tests
+# Install script for directory: /home/duarte33/42School/push_swap/push_swap_visualizer/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,10 @@ endif()
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+# Set default install directory permissions.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 

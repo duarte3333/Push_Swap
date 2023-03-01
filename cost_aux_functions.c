@@ -1,7 +1,7 @@
 #include "push_swap.h"
 
 
-int	ft_rotate_until_last_is_last(t_list **stack_a, int moves[], int i)
+int	ft_rotate_until_last_is_last(t_list **stack_a, char moves[], int i)
 {
 	int max;
 	int index;
@@ -36,6 +36,7 @@ int	ft_get_dynamic_average(t_list *stack_a)
 	long long sum;
 	int average;
 	int size;
+	int nb;
 
 	sum = 0;
 	size = ft_lstsize(stack_a);

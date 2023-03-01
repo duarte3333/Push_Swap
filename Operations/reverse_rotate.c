@@ -16,18 +16,18 @@ void	ft_reverse_rotate(t_list **stack)
 	*stack = temp;
 }
 
-int	rra(t_list **stack_a, int moves[], int i)
+int	rra(t_list **stack_a, char moves[], int i)
 {
 	ft_reverse_rotate(stack_a);
-	moves[i] = 9;
+	moves[i] = '9';
 	i++;
 	return (i);
 }
 
-int	rrb(t_list **stack_b, int moves[], int i)
+int	rrb(t_list **stack_b, char moves[], int i)
 {
 	ft_reverse_rotate(stack_b);
-	moves[i] = 10;
+	moves[i] = '3';
 	i++;
 	return (i);
 }

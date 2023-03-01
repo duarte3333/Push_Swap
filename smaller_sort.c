@@ -13,7 +13,7 @@
 #include "push_swap.h"
 
 
-int ft_sort_four(t_list **stack_a, t_list **stack_b, int moves[], int i)
+int ft_sort_four(t_list **stack_a, t_list **stack_b, char moves[], int i)
 {
 	int j;
 
@@ -25,7 +25,7 @@ int ft_sort_four(t_list **stack_a, t_list **stack_b, int moves[], int i)
 	return (i);
 }
 
-int	ft_sort_three(t_list **stack_a, int moves[], int i)
+int	ft_sort_three(t_list **stack_a, char moves[], int i)
 {
 	int	first;
 	int	second;
@@ -54,7 +54,7 @@ int	ft_sort_three(t_list **stack_a, int moves[], int i)
 	return (i);
 }
 
-int	ft_sort_five(t_list **stack_a, t_list **stack_b, int moves[], int i)
+int	ft_sort_five(t_list **stack_a, t_list **stack_b, char moves[], int i)
 {
 	int	index_min;
 	int	index_max;

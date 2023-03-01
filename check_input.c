@@ -33,7 +33,7 @@ int	ft_check_nb(char *str_nb)
 	int	i;
 
 	i = -1;
-	if (str_nb[0] == '-')
+	if (str_nb[0] == '-' || str_nb[0] == '+')
 		i++;
 	if (str_nb[0] == '-' && str_nb[1] == 0)
 		return (0);

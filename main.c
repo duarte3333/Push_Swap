@@ -12,71 +12,47 @@
 
 #include "push_swap.h"
 
-int	ft_optimize(int moves[], int i)
-{
-	if ((moves[i] == 1 && moves[i + 1] == 2) \
-	|| (moves[i] == 2 && moves[i + 1] == 1) )
-	{
-		printf("ss\n");
-		return (1);
-	}
-	else if ((moves[i] == 6 && moves[i + 1] == 7) \
-	|| (moves[i] == 7 && moves[i + 1] == 6))
-	{
-		printf("rr\n");
-		return (1);
-	}
-	else if ((moves[i] == 9 && moves[i + 1] == 10) \
-	|| (moves[i] == 10 && moves[i + 1] == 9))
-	{
-		printf("rrr\n");
-		return (1);
-	}
-	else 
-		return (0);
-}
-
-void	ft_print_moves(int moves[], int i)
+void	ft_print_moves(char moves[], int i)
 {
 	int j;
 	j = 0;
 
 	while (j <= i)
 	{
-		if ((moves[j] == 1 && moves[j + 1] == 2) \
-		|| (moves[j] == 2 && moves[j + 1] == 1) )
+		if ((moves[j] == '1' && moves[j + 1] == '2') \
+		|| (moves[j] == '2' && moves[j + 1] == '1') )
 		{
-			printf("ss\n");
+			write(1, "ss\n", 3);
 			j++;
 		}
-		else if ((moves[j] == 6 && moves[j + 1] == 7) \
-		|| (moves[j] == 7 && moves[j + 1] == 6))
+		else if ((moves[j] == '6' && moves[j + 1] == '7') \
+		|| (moves[j] == '7' && moves[j + 1] == '6'))
 		{
-			printf("rr\n");
+			write(1, "rr\n", 3);
 			j++;
 		}
-		else if ((moves[j] == 9 && moves[j + 1] == 10) \
-		|| (moves[j] == 10 && moves[j + 1] == 9))
+		else if ((moves[j] == '9' && moves[j + 1] == '3') \
+		|| (moves[j] == '3' && moves[j + 1] == '9'))
 		{
-			printf("rrr\n");
+			write(1, "rrr\n", 4);
 			j++;
 		}
-		else if (moves[j] == 1)
-			printf("sa\n");
-		else if (moves[j] == 2)
-			printf("sb\n");
-		else if (moves[j] == 4)
-			printf("pa\n");
-		else if (moves[j] == 5)
-			printf("pb\n");
-		else if (moves[j] == 6)
-			printf("ra\n");
-		else if (moves[j] == 7)
-			printf("rb\n");
-		else if (moves[j] == 9)
-			printf("rra\n");
-		else if (moves[j] == 10)
-			printf("rrb\n");
+		else if (moves[j] == '1')
+			write(1, "sa\n", 3);
+		else if (moves[j] == '2')
+			write(1, "sb\n", 3);
+		else if (moves[j] == '4')
+			write(1, "pa\n", 3);
+		else if (moves[j] == '5')
+			write(1, "pb\n", 3);
+		else if (moves[j] == '6')
+			write(1, "ra\n", 3);
+		else if (moves[j] == '7')
+			write(1, "rb\n", 3);
+		else if (moves[j] == '9')
+			write(1, "rra\n", 4);
+		else if (moves[j] == '3')
+			write(1, "rrb\n", 4);
 		j++;
 	}
 }
@@ -102,9 +78,9 @@ int	main(int ac, char **av)
 {
 	t_list	*stack_a;
 	t_list	*stack_b;
-	static int	moves[999999];
+	char	moves[999999];
 	int i;
-
+	
 	i = 0;
 	stack_b = NULL;
 	if (empty_file(av[1]))

@@ -42,14 +42,14 @@ void	ft_free_stack(t_list *stack_a);
 int		ft_check_double(t_list *stack_a, int a);
 
 //Moves
-int	pa(t_list **stack_a, t_list **stack_b, int moves[], int i);
-int	pb(t_list **stack_a, t_list **stack_b, int moves[], int i);
-int	rra(t_list **stack_a, int moves[], int i);
-int	rrb(t_list **stack_a, int moves[], int i);
-int	ra(t_list **stack_a, int moves[], int i);
-int	rb(t_list **stack_a, int moves[], int i);
-int	sa(t_list *stack_a, int moves[], int i);
-int	sb(t_list *stack_a, int moves[], int i);
+int	pa(t_list **stack_a, t_list **stack_b, char moves[], int i);
+int	pb(t_list **stack_a, t_list **stack_b, char moves[], int i);
+int	rra(t_list **stack_a, char moves[], int i);
+int	rrb(t_list **stack_a, char moves[], int i);
+int	ra(t_list **stack_a, char moves[], int i);
+int	rb(t_list **stack_a, char moves[], int i);
+int	sa(t_list *stack_a, char moves[], int i);
+int	sb(t_list *stack_a, char moves[], int i);
 void	ss(t_list *stack_a, t_list *stack_b);
 void	rrr(t_list **stack_a, t_list **stack_b);
 void	rr(t_list **stack_a, t_list **stack_b);
@@ -57,12 +57,12 @@ void	rr(t_list **stack_a, t_list **stack_b);
 
 //Algorithm
 int		ft_get_dynamic_average(t_list *stack_a);
-int		ft_sort_three(t_list **stack_a, int moves[], int i);
-int 	ft_sort_four(t_list **stack_a, t_list **stack_b, int moves[], int i);
-int		ft_sort_five(t_list **stack_a, t_list **stack_b, int moves[], int i);
-int		ft_put_top_a(t_list **lst, int index, int moves[], int i);
-int		ft_put_top_b(t_list **lst, int index, int moves[], int i);
-int		ft_cost_algorithm(t_list **stack_a, t_list **stack_b, int moves[], int i);
+int		ft_sort_three(t_list **stack_a, char moves[], int i);
+int 	ft_sort_four(t_list **stack_a, t_list **stack_b, char moves[], int i);
+int		ft_sort_five(t_list **stack_a, t_list **stack_b, char moves[], int i);
+int		ft_put_top_a(t_list **lst, int index, char moves[], int i);
+int		ft_put_top_b(t_list **lst, int index, char moves[], int i);
+int		ft_cost_algorithm(t_list **stack_a, t_list **stack_b, char moves[], int i);
 
 
 
@@ -70,7 +70,7 @@ int		ft_cost_algorithm(t_list **stack_a, t_list **stack_b, int moves[], int i);
 t_list	*ft_list_loading(char **av);
 void	print_list(t_list *stack_a, t_list *stack_b);
 
-int		ft_rotate_until_last_is_last(t_list **stack_a, int moves[], int i);
+int		ft_rotate_until_last_is_last(t_list **stack_a, char moves[], int i);
 
 //Aux Lists Functions
 int		ft_get_max(t_list *lst);
