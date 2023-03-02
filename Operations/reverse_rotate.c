@@ -6,7 +6,7 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 13:31:05 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/03/01 13:31:06 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/03/02 15:23:23 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,4 @@ void	rrr(t_list **stack_a, t_list **stack_b)
 {
 	ft_reverse_rotate(stack_a);
 	ft_reverse_rotate(stack_b);
-	printf("rrr\n");
 }

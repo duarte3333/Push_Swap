@@ -6,7 +6,7 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 13:31:18 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/03/01 13:31:24 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/03/02 15:23:16 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,4 @@ void	ss(t_list *stack_a, t_list *stack_b)
 {
 	ft_swap(stack_a);
 	ft_swap(stack_b);
-	printf("ss\n");
 }

@@ -6,7 +6,7 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 13:54:09 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/03/01 19:16:01 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/03/02 14:33:53 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ int	ft_get_dynamic_average(t_list *stack_a)
 	long long	sum;
 	int			average;
 	int			size;
-	int			nb;
 
 	sum = 0;
 	size = ft_lstsize(stack_a);

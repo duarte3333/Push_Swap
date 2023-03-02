@@ -6,7 +6,7 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 18:29:15 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/03/01 19:50:29 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/03/02 16:54:47 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ void	print_list(t_list *stack_a, t_list *stack_b);
 void	ft_print_moves(char moves[], int i);
 int		empty_file(char *str);
 int		ft_rotate_until_last_is_last(t_list **stack_a, char moves[], int i);
+int		ft_count_numbers(char **av);
 
 //Aux Lists Functions
 int		ft_get_max(t_list *lst);

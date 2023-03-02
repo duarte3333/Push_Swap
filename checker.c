@@ -6,41 +6,47 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 13:57:05 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/03/02 13:58:21 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/03/02 16:53:48 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
-void	possible_sorts(t_list *stack_a, t_list *stack_b, char moves[], int ac)
+int	ft_is_sorted(t_list *stack_a)
 {
-	int	i;
-
-	i = 0;
-	if (ac == 2)
-		;
-	else if (ac == 3)
+	if (!stack_a)
+		return (1);
+	while (stack_a->next != NULL)
 	{
-		if ((stack_a)->content > (stack_a)->next->content)
-			i = sa(stack_a, moves, i);
+		if ((stack_a->next->content) < (stack_a->content))
+			return (0);
+		stack_a = stack_a->next;
 	}
-	else if (ac == 4)
-		i = ft_sort_three(&stack_a, moves, i);
-	else if (ac == 5)
-		i = ft_sort_four(&stack_a, &stack_b, moves, i);
-	else if (ac == 6)
-		i = ft_sort_five(&stack_a, &stack_b, moves, i);
+	return (1);
+}
+
+void	ft_read_commands(t_list **stack_a, t_list **stack_b)
+{
+	char	*move;
+
+	move = get_next_line(0);
+	while (move)
+	{
+		checker_moves(stack_a, stack_b, move);
+		free(move);
+		move = get_next_line(0);
+	}
+	free(move);
+	if (ft_is_sorted(*stack_a))
+		write(1, "OK\n", 3);
 	else
-		i = ft_cost_algorithm(&stack_a, &stack_b, moves, i);
-	ft_free_stack(stack_b);
-	ft_free_stack(stack_a);
+		write(1, "KO\n", 3);
 }
 
 int	main(int ac, char **av)
 {
 	t_list	*stack_a;
 	t_list	*stack_b;
-	char	moves[999999];
 
 	stack_b = NULL;
 	if (empty_file(av[1]))
@@ -53,7 +59,7 @@ int	main(int ac, char **av)
 	stack_a = ft_list_loading(av);
 	if (stack_a == NULL)
 		write(2, "Error\n", 6);
-	else
-		possible_sorts(stack_a, stack_b, moves, ac);
-	if (ft_is_s)
+	ft_read_commands(&stack_a, &stack_b);
+	ft_free_stack(stack_b);
+	ft_free_stack(stack_a);
 }

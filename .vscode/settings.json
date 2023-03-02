@@ -6,6 +6,7 @@
 		"initializer_list": "c",
 		"regex": "c",
 		"utility": "c",
-		"push_swap.h": "c"
+		"push_swap.h": "c",
+		"get_next_line.h": "c"
 	}
 }
