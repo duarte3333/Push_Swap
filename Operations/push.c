@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/01 13:30:53 by dsa-mora          #+#    #+#             */
+/*   Updated: 2023/03/01 13:30:54 by dsa-mora         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 void	ft_push(t_list **stack_get, t_list **stack_give)
@@ -12,7 +24,6 @@ void	ft_push(t_list **stack_get, t_list **stack_give)
 	*stack_give = temp;
 }
 
-
 //Take the first element at the top of b and put it at the top of a
 int	pa(t_list **stack_a, t_list **stack_b, char moves[], int i)
 {
@@ -22,7 +33,6 @@ int	pa(t_list **stack_a, t_list **stack_b, char moves[], int i)
 	return (i);
 }
 
-
 //Take the first element at the top of a and put it at the top of b.
 int	pb(t_list **stack_a, t_list **stack_b, char moves[], int i)
 {
@@ -31,4 +41,3 @@ int	pb(t_list **stack_a, t_list **stack_b, char moves[], int i)
 	i++;
 	return (i);
 }
-

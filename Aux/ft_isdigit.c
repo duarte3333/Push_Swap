@@ -18,9 +18,3 @@ int	ft_isdigit(int i)
 		return (1);
 	return (0);
 }
-
-// int main()
-// {
-//     printf("%i", ft_isdigit(40));
-//     return(0);
-// }

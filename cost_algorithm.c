@@ -6,118 +6,76 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 13:15:13 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/02/27 21:12:29 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/03/02 13:54:30 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_calculate_cost_up(int size, int index)
+//Coloca o melhor amigo e o numero em questao no topo da sua depois 
+//manda o numero do A para o B de modo a ficarem juntos
+int	ft_make_the_moves(t_stack *budd, t_list **stack_a, \
+t_list **stack_b, char moves[])
 {
-	int counter;
-	
-	counter = 0;
-	if (index <= (size / 2))
-	{
-		counter = index;
-	}
-	else if(index > (size / 2))
-		counter = size - index;	
-	return (counter);
+	budd->i = ft_put_top_a(stack_a, budd->final_bf, moves, budd->i);
+	budd->i = ft_put_top_b(stack_b, budd->final_nb, moves, budd->i);
+	budd->i = pa(stack_a, stack_b, moves, budd->i);
+	return (budd->i);
 }
 
-int ft_get_best_buddy(t_list **stack_a, long long nb)
+//Esta funcao ira definir algumas variaveis que irao ser utilizadas 
+//na funcao cost buddy
+void	ft_set_buddy(t_stack *cost_buddy, t_list **stack_a, \
+	t_list **stack_b, int i)
 {
-	long int best_buddy;
-	long int counter;
-	long int tmp;
-	t_list *temp;
-
-	counter = __LONG_LONG_MAX__;	
-	best_buddy = __LONG_LONG_MAX__;	
-	temp = *stack_a;
-	while (*stack_a)
-	{
-		//printf("nb em A %i\n", (*stack_a)->content);
-		tmp = (*stack_a)->content - nb;
-		//printf("diff %li < counter %li\n", tmp, counter);
-		//printf("best byddy %li\n", best_buddy);
-		if ((tmp < counter) && ((*stack_a)->content > nb))
-		{
-			//printf("oi\n");
-			counter = tmp;
-			best_buddy = (*stack_a)->content;
-		}
-		(*stack_a) = (*stack_a)->next;
-	}
-	*stack_a = temp;
-	if (best_buddy == __LONG_LONG_MAX__)
-		return (-1);
-	//printf("acabei %i\n", ft_get_index(best_buddy, *stack_a));
-	return (ft_get_index(best_buddy, *stack_a));
+	cost_buddy->i = i;
+	cost_buddy->temp = *stack_b;
+	cost_buddy->best = INT_MAX;
+	cost_buddy->index_nb = 0;
+	cost_buddy->size_b = ft_lstsize(*stack_b);
+	cost_buddy->size_a = ft_lstsize(*stack_a);
 }
 
-int	ft_get_cost_best_buddy(t_list **stack_a, t_list **stack_b, char moves[], int i)
+//Calcula todas as possibilidades de melhor amigo e para um numero em A
+//e escolhe aquele que custar menos levar ate ao topo
+//Depois, chama a funcao acima que permite o numero do A e melhor amigo
+//ficarem juntos
+int	ft_get_cost_best_buddy(t_list **stack_a, t_list **stack_b, \
+	char moves[], int i)
 {
-	int index_bf;
-	int cost_bf;
-	int cost_nb;
-	int best;
-	int final_bf;
-	int final_nb;
-	int index_nb;
-	int size_b;
-	int size_a;
-	t_list *temp;
+	t_stack	budd;
 
-	best = INT_MAX;
-	temp = *stack_b;
-	index_nb = 0;
-	size_b = ft_lstsize(*stack_b);
-	size_a = ft_lstsize(*stack_a);
-	while (*stack_b)	
+	ft_set_buddy(&budd, stack_a, stack_b, i);
+	while (*stack_b)
 	{
-		index_bf = ft_get_best_buddy(stack_a, (*stack_b)->content);
-		//printf("nb: %i\n", (*stack_b)->content);
-		if (index_bf != -1)
+		budd.index_bf = ft_get_best_buddy(stack_a, (*stack_b)->content);
+		if (budd.index_bf != -1)
 		{
-			//printf("index_bf %i\n", index_bf);
-			//printf("index_nb %i\n", index_nb);
-			cost_bf = ft_calculate_cost_up(size_a, index_bf);
-			cost_nb = ft_calculate_cost_up(size_b, index_nb);
-			if ((cost_bf + cost_nb) < best && (cost_bf + cost_nb) >= 0)
+			budd.cost_bf = ft_calculate_cost_up(budd.size_a, budd.index_bf);
+			budd.cost_nb = ft_calculate_cost_up(budd.size_b, budd.index_nb);
+			if ((budd.cost_bf + budd.cost_nb) < budd.best \
+				&& (budd.cost_bf + budd.cost_nb) >= 0)
 			{	
-				//printf("cost_bf: %i\n", cost_bf);
-				//printf("cost_nb: %i\n", cost_nb);
-				final_nb = index_nb;
-				final_bf = index_bf;
-				best = cost_nb + cost_bf;
-				//printf("final_nb %i", final_nb);
-				//printf("final_bf %i", final_bf);
+				budd.final_nb = budd.index_nb;
+				budd.final_bf = budd.index_bf;
+				budd.best = budd.cost_nb + budd.cost_bf;
 			}
 		}
 		(*stack_b) = (*stack_b)->next;
-		index_nb++;
+		budd.index_nb++;
 	}
-	*stack_b = temp;
-	i = ft_put_top_a(stack_a, final_bf, moves, i);
-	i = ft_put_top_b(stack_b, final_nb, moves, i);
-	i = pa(stack_a, stack_b, moves, i);
-	//print_list(*stack_a, *stack_b);
+	*stack_b = budd.temp;
+	i = ft_make_the_moves(&budd, stack_a, stack_b, moves);
 	return (i);
-
 }
-
 
 int	ft_cost_algorithm(t_list **stack_a, t_list **stack_b, char moves[], int i)
 {
-
-	int average;
+	int	average;
 
 	average = ft_get_dynamic_average(*stack_a);
 	while (ft_lstsize(*stack_a) > 5)
 	{
-		//printf("average %i\n", average);
 		if ((*stack_a)->content > average)
 			i = ra(stack_a, moves, i);
 		else
@@ -127,15 +85,10 @@ int	ft_cost_algorithm(t_list **stack_a, t_list **stack_b, char moves[], int i)
 		}
 	}
 	i = ft_sort_five(stack_a, stack_b, moves, i);
-	//print_list(*stack_a, *stack_b);
 	while (ft_lstsize(*stack_b) > 0)
 	{
 		i = ft_get_cost_best_buddy(stack_a, stack_b, moves, i);
 	}
-	//print_list(*stack_a, *stack_b);
 	i = ft_rotate_until_last_is_last(stack_a, moves, i);
-	//print_list(*stack_a, *stack_b);
-
 	return (i);
 }
-

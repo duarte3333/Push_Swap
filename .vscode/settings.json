@@ -5,6 +5,7 @@
 		"string_view": "c",
 		"initializer_list": "c",
 		"regex": "c",
-		"utility": "c"
+		"utility": "c",
+		"push_swap.h": "c"
 	}
 }

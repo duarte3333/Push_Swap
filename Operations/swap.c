@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   swap.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/01 13:31:18 by dsa-mora          #+#    #+#             */
+/*   Updated: 2023/03/01 13:31:24 by dsa-mora         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 void	ft_swap(t_list *stack)
@@ -21,7 +33,7 @@ int	sa(t_list *stack_a, char moves[], int i)
 }
 
 //Swap the first 2 elements at the top of stack b.
-int sb(t_list *stack_b, char moves[], int i)
+int	sb(t_list *stack_b, char moves[], int i)
 {
 	ft_swap(stack_b);
 	moves[i] = '2';

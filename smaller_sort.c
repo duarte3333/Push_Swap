@@ -6,19 +6,18 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 15:05:35 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/02/27 18:34:26 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/03/01 20:37:02 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-int ft_sort_four(t_list **stack_a, t_list **stack_b, char moves[], int i)
+int	ft_sort_four(t_list **stack_a, t_list **stack_b, char moves[], int i)
 {
-	int j;
+	int	j;
 
-	j =  ft_get_index(ft_get_min(*stack_a), *stack_a);
-	i =	 ft_put_top_a(stack_a, j, moves, i);
+	j = ft_get_index(ft_get_min(*stack_a), *stack_a);
+	i = ft_put_top_a(stack_a, j, moves, i);
 	i = pb(stack_a, stack_b, moves, i);
 	i = ft_sort_three(stack_a, moves, i);
 	i = pa(stack_a, stack_b, moves, i);
@@ -34,7 +33,6 @@ int	ft_sort_three(t_list **stack_a, char moves[], int i)
 	first = (*stack_a)->content;
 	second = (*stack_a)->next->content;
 	third = (*stack_a)->next->next->content;
-
 	if ((first > second) && (second < third) && (first < third))
 		i = sa(*stack_a, moves, i);
 	else if ((first > second) && (second > third) && (first > third))

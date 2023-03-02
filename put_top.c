@@ -6,10 +6,9 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 17:16:04 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/02/11 18:17:27 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/03/01 20:37:17 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -42,7 +41,6 @@ int	ft_put_top_a(t_list **lst, int index, char moves[], int j)
 	return (j);
 }
 
-
 int	ft_put_top_b(t_list **lst, int index, char moves[], int j)
 {
 	int	size;
@@ -57,7 +55,6 @@ int	ft_put_top_b(t_list **lst, int index, char moves[], int j)
 		while (i)
 		{
 			j = rb(lst, moves, j);
-			//printf("oi\n");
 			i--;
 		}
 	}

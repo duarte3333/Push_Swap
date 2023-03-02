@@ -21,7 +21,9 @@ SRCS = main.c \
 	   load_list.c \
 	   print_list.c \
 	   put_top.c \
-	   smaller_sort.c 
+	   smaller_sort.c \
+	   print_moves.c \
+	   get_best_buddy.c
 
 
 OBJS	= ${SRCS:.c=.o}

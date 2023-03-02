@@ -6,7 +6,7 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 17:16:16 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/02/10 17:16:18 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/03/01 13:35:28 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,3 @@ int	ft_get_int(int index, t_list *lst)
 	}
 	return (lst->content);
 }
-
