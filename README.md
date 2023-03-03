@@ -1,6 +1,7 @@
 
 # Creating a sorting algorithm
 
+I managed to get an average of 595 moves for 100 random numbers and an average of 4806 for 500 random numbers.
 
 ## The problem
 
