@@ -76,6 +76,8 @@ As you can see, this algorithm is quite efficient for low input sizes, however, 
 
 ## Theory
 
+As this project consists of evaluating the performance of algorithms, I decided to study the main algorithms that existed from the least efficient to the most efficient.
+
 ## Big O notation
 ![image](https://user-images.githubusercontent.com/76222459/222556250-18e3b442-38ee-4391-ac73-bb7520db8350.png)
 
