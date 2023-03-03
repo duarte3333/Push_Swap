@@ -28,14 +28,12 @@ The challenge is to find the shortest sequence of operations that accomplishes t
 
 This explanation is made for an example of 10 elements, however, to organize a larger amount of numbers the procedure is exactly the same, without any changes.
 
-<p>
-	<img class="center" src="https://user-images.githubusercontent.com/76222459/222554083-3d513151-4cb5-4834-9c50-ee27a56136c9.png" width=70% height=70%>
-    <img class="center" src="https://user-images.githubusercontent.com/76222459/222554076-334cb353-d38a-4e93-ab7e-23912066383d.png" width=70% height=70%>
-    <img class="center" src="https://user-images.githubusercontent.com/76222459/222554086-63c514fc-24fe-4443-beae-75a7df4db99b.png" width=70% height=70%>
-    <img class="center" src="https://user-images.githubusercontent.com/76222459/222554089-852250ed-e208-426a-8dee-3fb7eb0ef3e5.png" width=70% height=70%>
-    <img class="center" src="https://user-images.githubusercontent.com/76222459/222554092-6046aa6d-e2ca-46cb-ad6b-ade4acd7458a.png" width=70% height=70%>
-    <img class="center" src="https://user-images.githubusercontent.com/76222459/222554097-f4993cba-f7f8-4c54-b46e-d4d86fdc1432.png" width=70% height=70%>
-</p>
+![Screenshot from 2023-03-02 21-09-50](https://user-images.githubusercontent.com/76222459/222554083-3d513151-4cb5-4834-9c50-ee27a56136c9.png)
+![Screenshot from 2023-03-02 21-09-29](https://user-images.githubusercontent.com/76222459/222554076-334cb353-d38a-4e93-ab7e-23912066383d.png)
+![Screenshot from 2023-03-02 21-10-03](https://user-images.githubusercontent.com/76222459/222554086-63c514fc-24fe-4443-beae-75a7df4db99b.png)
+![Screenshot from 2023-03-02 21-10-16](https://user-images.githubusercontent.com/76222459/222554089-852250ed-e208-426a-8dee-3fb7eb0ef3e5.png)
+![Screenshot from 2023-03-02 21-10-33](https://user-images.githubusercontent.com/76222459/222554092-6046aa6d-e2ca-46cb-ad6b-ade4acd7458a.png)
+![Screenshot from 2023-03-02 21-10-46](https://user-images.githubusercontent.com/76222459/222554097-f4993cba-f7f8-4c54-b46e-d4d86fdc1432.png)
 
 ## Results
 For **100 random numbers** this are the results (1000 tests):
