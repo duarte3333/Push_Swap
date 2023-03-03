@@ -65,7 +65,8 @@ For **10000 random numbers**  random numbers this are the results (1 test):
 
 ![image](https://user-images.githubusercontent.com/76222459/222628028-7e33c685-ab59-4fba-834e-2d20d4b3df99.png)
 
-It took, almost 15min to sort the numbers!!
+It took, almost 15min to sort the numbers
+
 ---
 ## Time complexity of my algorithm
 
