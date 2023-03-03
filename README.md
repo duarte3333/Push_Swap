@@ -61,6 +61,12 @@ For **1000 random numbers**  random numbers this are the results (50 tests):
 The average was 12281 moves
 
 ---
+For **10000 random numbers**  random numbers this are the results (1 test):
+
+![image](https://user-images.githubusercontent.com/76222459/222628028-7e33c685-ab59-4fba-834e-2d20d4b3df99.png)
+
+It took, almost 15min to sort the numbers!!
+---
 ## Time complexity of my algorithm
 
 ![image](https://user-images.githubusercontent.com/76222459/222624670-04d91415-fdbf-46e7-b11c-d1ea6c39b667.png)
