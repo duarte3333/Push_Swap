@@ -1,8 +1,6 @@
 
 # Creating a sorting algorithm
 
-I managed to get an average of 595 moves for 100 random numbers and an average of 4806 for 500 random numbers.
-
 ## The problem
 
 This project is an intriguing case study that explores sorting algorithms and their performance. The objective is straightforward: given a sequence of random numbers arranged in a stack data structure (stack A), use an empty auxiliary stack (stack B) and a specific set of stack operations to sort them. The operations allowed for this task are described as follows:
@@ -20,6 +18,8 @@ This project is an intriguing case study that explores sorting algorithms and th
 - **`rrr`** : **`rra`** and **`rrb`** at the same time.
 
 The challenge is to find the shortest sequence of operations that accomplishes this task, with as few moves as possible. The push swap problem is often used as a benchmark for evaluating the efficiency of sorting algorithms and programs.
+
+I managed to get an average of 595 moves for 100 random numbers and an average of 4806 for 500 random numbers.
 
 ## Example
 
