@@ -30,7 +30,9 @@ I managed to get an average of 595 moves for 100 random numbers and an average o
 This explanation is made for an example of 10 elements, however, to organize a larger amount of numbers the procedure is exactly the same, without any changes.
 
 ![Screenshot from 2023-03-02 21-09-50](https://user-images.githubusercontent.com/76222459/222554083-3d513151-4cb5-4834-9c50-ee27a56136c9.png)
-![Screenshot from 2023-03-02 21-09-29](https://user-images.githubusercontent.com/76222459/222554076-334cb353-d38a-4e93-ab7e-23912066383d.png)
+![image](https://user-images.githubusercontent.com/76222459/222741259-22ec0431-dc01-48b2-a59b-fd2729142a0f.png)
+![image](https://user-images.githubusercontent.com/76222459/222742009-2de53e55-7267-4f41-8612-2bdd8f21a776.png)
+![image](https://user-images.githubusercontent.com/76222459/222740954-7e812ebc-a8d3-4577-89df-e997126fed34.png)
 ![Screenshot from 2023-03-02 21-10-03](https://user-images.githubusercontent.com/76222459/222554086-63c514fc-24fe-4443-beae-75a7df4db99b.png)
 ![Screenshot from 2023-03-02 21-10-16](https://user-images.githubusercontent.com/76222459/222554089-852250ed-e208-426a-8dee-3fb7eb0ef3e5.png)
 ![Screenshot from 2023-03-02 21-10-33](https://user-images.githubusercontent.com/76222459/222554092-6046aa6d-e2ca-46cb-ad6b-ade4acd7458a.png)
