@@ -20,18 +20,16 @@ The challenge is to find the shortest sequence of operations that accomplishes t
 
 I managed to get an average of 595 moves for 100 random numbers and an average of 4806 for 500 random numbers.
 
-## Example
-
-[Screencast from 02-03-2023 18:11:24.webm](https://user-images.githubusercontent.com/76222459/222515610-0730b0ed-b278-4eab-9ffe-339707656876.gif)
-
 ## My Algorithm
 
 This explanation is made for an example of 10 elements, however, to organize a larger amount of numbers the procedure is exactly the same, without any changes.
 
 ![Screenshot from 2023-03-02 21-09-50](https://user-images.githubusercontent.com/76222459/222554083-3d513151-4cb5-4834-9c50-ee27a56136c9.png)
+![image](https://user-images.githubusercontent.com/76222459/222823207-7bd1db88-fb12-4114-8ea1-33d4d9f80ae4.png)
 ![image](https://user-images.githubusercontent.com/76222459/222741259-22ec0431-dc01-48b2-a59b-fd2729142a0f.png)
+![image](https://user-images.githubusercontent.com/76222459/222823740-2c2a7bde-7d1c-4c0c-b6b2-85bcbba12e87.png)
+
 ![image](https://user-images.githubusercontent.com/76222459/222742009-2de53e55-7267-4f41-8612-2bdd8f21a776.png)
-![image](https://user-images.githubusercontent.com/76222459/222740954-7e812ebc-a8d3-4577-89df-e997126fed34.png)
 ![Screenshot from 2023-03-02 21-10-03](https://user-images.githubusercontent.com/76222459/222554086-63c514fc-24fe-4443-beae-75a7df4db99b.png)
 ![Screenshot from 2023-03-02 21-10-16](https://user-images.githubusercontent.com/76222459/222554089-852250ed-e208-426a-8dee-3fb7eb0ef3e5.png)
 ![Screenshot from 2023-03-02 21-10-33](https://user-images.githubusercontent.com/76222459/222554092-6046aa6d-e2ca-46cb-ad6b-ade4acd7458a.png)
