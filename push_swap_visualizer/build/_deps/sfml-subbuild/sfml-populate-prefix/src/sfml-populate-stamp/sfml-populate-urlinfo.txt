@@ -1,3 +1,0 @@
-repository='external project URL'
-module='https://github.com/SFML/SFML/releases/download/2.5.1/SFML-2.5.1-sources.zip'
-tag=''

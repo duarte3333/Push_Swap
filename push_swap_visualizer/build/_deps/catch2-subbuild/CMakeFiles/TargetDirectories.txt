@@ -1,3 +1,0 @@
-/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles/catch2-populate.dir
-/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles/edit_cache.dir
-/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles/rebuild_cache.dir

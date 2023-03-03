@@ -6,7 +6,7 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 18:29:15 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/03/02 16:54:47 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/03/03 17:10:00 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define PUSH_SWAP_H
 
 # include <unistd.h>
-# include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
 # include <limits.h>
@@ -66,7 +65,6 @@ int		sb(t_list *stack_a, char moves[], int i);
 void	ss(t_list *stack_a, t_list *stack_b);
 void	rrr(t_list **stack_a, t_list **stack_b);
 void	rr(t_list **stack_a, t_list **stack_b);
-
 
 //Algorithm
 int		ft_get_dynamic_average(t_list *stack_a);

@@ -6,7 +6,7 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 17:09:25 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/03/02 16:56:23 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/03/03 17:10:54 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ int	ft_count_numbers(char **av)
 	}
 	return (nb);
 }
-
 
 t_list	*ft_list_loading(char **av)
 {

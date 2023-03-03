@@ -6,18 +6,33 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 15:21:34 by dsa-mora          #+#    #+#             */
-/*   Updated: 2023/03/02 16:55:34 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2023/03/03 17:10:41 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int	ft_is_sorted(t_list *stack_a)
+{
+	if (!stack_a)
+		return (1);
+	while (stack_a->next != NULL)
+	{
+		if ((stack_a->next->content) < (stack_a->content))
+			return (0);
+		stack_a = stack_a->next;
+	}
+	return (1);
+}
 
 void	possible_sorts(t_list *stack_a, t_list *stack_b, char moves[], int nb)
 {
 	int	i;
 
 	i = 0;
-	if (nb == 1)
+	if (ft_is_sorted(stack_a))
+		;
+	else if (nb == 1)
 		;
 	else if (nb == 2)
 	{
@@ -55,7 +70,6 @@ int	main(int ac, char **av)
 	}
 	nb_elem = ft_count_numbers(av);
 	stack_a = ft_list_loading(av);
-	printf("nb %i\n", nb_elem);
 	if (stack_a == NULL)
 		write(2, "Error\n", 6);
 	else

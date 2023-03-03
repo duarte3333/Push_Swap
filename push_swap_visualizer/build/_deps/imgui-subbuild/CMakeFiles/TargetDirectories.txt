@@ -1,3 +1,0 @@
-/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir
-/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-subbuild/CMakeFiles/edit_cache.dir
-/home/duarte33/42School/push_swap/push_swap_visualizer/build/_deps/imgui-subbuild/CMakeFiles/rebuild_cache.dir

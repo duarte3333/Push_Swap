@@ -20,7 +20,6 @@ SRCS = main.c \
 	   cost_algorithm.c \
 	   cost_aux_functions.c \
 	   load_list.c \
-	   print_list.c \
 	   put_top.c \
 	   smaller_sort.c \
 	   print_moves.c \
