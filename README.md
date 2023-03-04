@@ -19,6 +19,11 @@ This project is an intriguing case study that explores sorting algorithms and th
 The challenge is to find the shortest sequence of operations that accomplishes this task, with as few moves as possible. The push swap problem is often used as a benchmark for evaluating the efficiency of sorting algorithms and programs.
 
 I managed to get an average of 595 moves for 100 random numbers and an average of 4806 for 500 random numbers.
+## Visualization
+
+![image](https://user-images.githubusercontent.com/76222459/222914342-4281002c-1bb6-4a37-b665-5807e7e027e7.png)
+In order to better understand what was going on with the algorithm for larger numbers, I used this visualization made by 
+ :- [@o-reo] (https://www.github.com/o-reo)
 
 ## My Algorithm
 
