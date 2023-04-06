@@ -219,6 +219,21 @@ Continue merging pairs of sub-stacks until you have a single sorted stack.
 Merge sort has a time complexity of O(n * log n) in the average case and the best case, where n is the number of elements in the array. It is a stable sorting algorithm, meaning that the relative order of equal elements is preserved, and it can sort both ascending and descending.
 
 
-To see the code of some of the algorithms, check my notion:
+#### To see the code of some of the algorithms, check my notion:
 
 https://polarized-algebra-458.notion.site/Push-Swap-431f5dc509244061a508e042219931ef
+
+## My written notes
+
+<div align="center">
+    <table >
+     <!-- <tr>
+        <td><b>Latest Tweets</b></td>
+        <td><b>daily.dev</b></td>
+     </tr> -->
+     <tr>
+       <td><img src="https://user-images.githubusercontent.com/76222459/230508791-3219a18a-0faf-4334-8867-c3b6030bcd72.jpg" width="400" alt="sunil sapkota twitter" > </img></td>
+        <td><img src="https://user-images.githubusercontent.com/76222459/230508787-88ba7cd3-9087-42d2-8b3d-a95445e503ed.jpg" width="400" alt="sunil sapkota's Dev Card"/></td>
+     </tr>
+    </table>
+    </div>
