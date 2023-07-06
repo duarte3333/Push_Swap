@@ -49,7 +49,7 @@ For **500 random numbers**  random numbers this are the results (1000 tests):
 
 ![image](https://user-images.githubusercontent.com/76222459/222610262-48e181fb-3ef9-4782-abca-2f4feea6246f.png)
 
-The average was 4806 moves
+The average was 4806 moves.
 
 ---
 
@@ -57,7 +57,7 @@ For **1000 random numbers**  random numbers this are the results (50 tests):
 
 ![image](https://user-images.githubusercontent.com/76222459/222610576-1bd6f740-d1f3-425e-b47b-7e7b5c960181.png)
 
-The average was 12281 moves
+The average was 12281 moves.
 
 ---
 For **10000 random numbers**  random numbers this are the results (1 test):
